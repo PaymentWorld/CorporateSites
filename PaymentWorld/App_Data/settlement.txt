@@ -1,0 +1,33 @@
+﻿[\***EmailSubject=Visa/MasterCard Settlement Claim Inquiry&EmailFrom=clientservices@paymentworld.com&EmailFromName=Client Services&Cc=eros@nationalmerchant.com, eespinosa@paymentworld.com***/]
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>[*NAME*]</td>
+    </tr>
+    <tr>
+        <td>Business Name:</td>
+        <td>[*BUSINESSNAME*]</td>
+    </tr>
+    <tr>
+        <td>Phone Number:</td>
+        <td>[*PHONENUMBER*]</td>
+    </tr>
+    <tr>
+        <td>E-Mail Address:</td>
+        <td>[*EMAILADDRESS*]</td>
+    </tr>
+    <tr><td></td></tr>
+    <tr>
+        <td colspan="2">To: [*NAME*]</td>
+    </tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+    <tr>
+        <td colspan="2">Thank you for your inquiry. A specialist will contact you shortly.</td>
+    </tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+    <tr>
+        <td colspan="2">Payment World</td>
+    </tr>
+</table>

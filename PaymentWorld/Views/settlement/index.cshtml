@@ -1,0 +1,102 @@
+﻿@using Codebase.Website.Helpers;
+
+@model Codebase.Website.Models.AccountSetupViewModel
+           
+@{
+    ViewBag.Title = "SETTLEMENT";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSlider2Partial", partialView = "_MenuSettlementPartial", showSlider = true });}
+
+<div class="content">
+    <div class="empty-box"></div>
+    <div class="bottomBox">
+        <div class="bottomBoxShadow">
+            <div class="squareTopleft"></div>
+            <div class="shadowTop"></div>
+            <div class="squareTopRight"></div>
+        </div>
+        <!--text title --> 
+        <div class="textBox">
+            <div class="textBox-four-format-left">
+                <div class="textBoxOnea"></div>
+                <div class="textBox-four-format-left-a">VISA/MASTERCARD INTERCHANGE FEE SETTLEMENT</div>                           
+            </div>
+            <div class="textBoxThird">
+                @*
+                <div class="textBoxThirda">MERCHANT ACCOUNT SETUP</div>
+                *@
+                <div class="textBoxThirdb"></div>
+            </div>
+        </div>
+        <div class="horizontal"></div>
+        <!--end text title --> 
+        <div class="bottomBoxEntry">
+            <div class="entrybox-four-format-left">
+                <div class="bottomBoxEntryOnea"></div>
+                <div class="entrybox-four-format-left-a">
+                    <div style="width:45%; float:left; padding-top:10px; font-weight:bold">
+                        FOR MORE INFORMATION ABOUT THIS<br />
+                        SETTLEMENT, PLEASE FILL OUT THE FORM<br />
+                        AND AN AGENT WILL CONTACT YOU.
+                    </div>                    
+                    <div style="width:50%; float:right;">
+                        @using (Html.BeginForm())
+                        {                                                        
+                            <table style="width:100%;" cellpadding="0px" cellspacing="0px" border="0">
+                                <tr>
+                                    <td colspan="3">
+                                        @Html.TextBox("fakeName", "Contact Name", new { @style = "color: #7c8293; width:203px", @maxlength = "50" })
+                                        @Html.TextBoxFor(m => m.Name, new { @style = "width:203px; display:none", @maxlength = "50" })
+                                        @Html.ValidationMessageFor(m => m.Name)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        @Html.TextBox("fakeBusinessName", "Business Name", new { @style = "color: #7c8293; width:203px", @maxlength = "50" })
+                                        @Html.TextBoxFor(m => m.BusinessName, new { @style = "width:203px; display:none", @maxlength = "50" })
+                                        @Html.ValidationMessageFor(m => m.BusinessName)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        @Html.TextBox("fakePhoneNumber", "Phone Number", new { @style = "color: #7c8293; width:203px", @maxlength = "12" })
+                                        @Html.TextBoxFor(m => m.PhoneNumber, new { @style = "width:203px; display:none", @maxlength = "12" })
+                                        @Html.ValidationMessageFor(m => m.PhoneNumber)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">                                                                                                                                                                
+                                        @Html.TextBox("fakeEmailAddress", "E-Mail Address", new { @style = "color: #7c8293; width:203px", @maxlength = "50" })
+                                        @Html.TextBoxFor(m => m.EmailAddress, new { @style = "width:203px; display:none", @maxlength = "50" })
+                                        @Html.ValidationMessageFor(m => m.EmailAddress)
+                                    </td>
+                                </tr>
+                                <tr>                                    
+                                    <td colspan="3" style="text-align:right">
+                                        @Html.SubmitButtonImage("btn-submit", null, "display:inline;cursor:hand;cursor:pointer")
+                                        @Html.SubmitButtonImage("btn-submit-ref", null, "display:none;cursor:hand;cursor:pointer")                                        
+                                    </td>
+                                </tr>
+                            </table>                                                                                                                           
+                        } 
+
+                    </div>                                              
+                </div>                 
+                @*<div class="bottomBoxEntryOnec"></div>*@
+            </div>                      
+            <div class="bottomBoxEntryThird">
+                <div class="entrybox-four-format-righta">
+                    <div  style="padding-top:10px;">
+                    @*
+                    Ready to open a merchant account with us? Then go directly to our express Online Merchant Application to submit your request in less than 10 minutes. Follow the link below.<br /><br /><br /><br />                   
+                    <a  href="@System.Configuration.ConfigurationManager.AppSettings.Get("OnlineMerchantApplicationUrl")" target="_blank" id="btn-merchantApp"></a>
+                    <a  href="@System.Configuration.ConfigurationManager.AppSettings.Get("OnlineMerchantApplicationUrl")" target="_blank" id="btn-merchantApp-ref"></a>                    
+                    *@
+                    </div>                    
+                </div>
+                <div class="bottomBoxEntryThirdb"></div>
+            </div>                  
+        </div>     
+    </div>
+</div>

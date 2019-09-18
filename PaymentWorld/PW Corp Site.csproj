@@ -1,0 +1,520 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E7DFE56-AD2A-4938-BF3D-F341B0330804}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Codebase.Website.Pw</RootNamespace>
+    <AssemblyName>Codebase.Website.Pw</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\demo.html" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Manfred Klein License.txt" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-Bold-webfont.svg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-ExtraBold-webfont.svg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\stylesheet.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\generator_config.txt" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\specimen_files\specimen_stylesheet.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\stylesheet.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\todaysanshefop-light-demo.html" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\bkgd_bottomReflection.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\bkgd_footerBlue.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\bkgd_gradient.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\bkgd_lightBlue.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\bkgd_whitePage.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_line_horizontal.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_line_vertical.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_bottom.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_bottomLeft.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_bottomRight.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_cross.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_left.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_right.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_top.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_topLeft.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\box_shadow_topRight.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_appleApp.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_appleApp_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_arrowLeft.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_arrowRight.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_askExpert.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_bbb.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_bbb_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_cnn.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_cnn_mouseOver.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_facebook.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_facebook_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_getQuote.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_google.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_google_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_learnMore.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_left_arrow_image.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_left_arrow_text.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_linkedin.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_linkedin_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_login.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_login_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_menu.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_menu.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_merchantApp.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_merchantApp_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_msn.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_msn_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_NYtimes.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_NYtimes_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_pciCompliant.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_right_arrow_image.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_right_arrow_text.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_rss.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_rss_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_submit.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_submit_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_twitter.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_twitter_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\icon.ico" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img-poynt.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img-pw_shield.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_arrowLeft.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_arrowRight.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_atm.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_barLeft.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_barRight.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_bkgd_LightBlue.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_cash.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_check.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_creditCardTerminal.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_ecommerce.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_flag_USA.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_giftCard.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_header.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_header_2.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_header_20150416.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_main_3.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_main_4.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_main_5.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_merchant_services.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_pci.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_pos.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_posSystem.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_products_page1.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_products_timeLine.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_quickbooks.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_reports.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_tabTop.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_verticalSeparator.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_vt.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_wireless.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-5008-body-1.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-5008-contact-2.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-5008-contact-3.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-5008-footer-2.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-5008-footer.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-5008-header.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-body.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-contact-2.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-footer-2.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-footer.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-header.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowLeft.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowTop.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowTopLeftCorner.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\main-site.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuaccount-setuppartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuaccount-setuppartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menucareerspartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menucareerspartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menucontact-uspartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menucontact-uspartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuhomepartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuhomepartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuiso-agentpartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuiso-agentpartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menulearning-resourcespartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menulearning-resourcespartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menumerchant-supportpartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menumerchant-supportpartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menupartnerspartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menupartnerspartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\nemo.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\toystory.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\up.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\walle.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_cash_vt_atm.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product-merchant.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_products_1st_page.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_products_page1.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product_atm.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product_cash.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product_gift.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product_loyalty-rewards.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product_merchant_services.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\img_product_vt.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menusettlementpartial\img_settlement.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menusupport-centerpartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menusupport-centerpartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuwhy-uspartial\img_main_acceptCC.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuwhy-uspartial\img_main_processingSolution.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\nivo-slider.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\slides-slider.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\arrows.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\bullets.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\default.css" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\loading.gif" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="docs\edit-images\banner-bottom.png" />
+    <Content Include="docs\edit-images\bannerMastercard.png" />
+    <Content Include="docs\edit-images\bannerVisa.png" />
+    <Content Include="docs\edit-images\bg.png" />
+    <Content Include="docs\edit-images\bottomBg.png" />
+    <Content Include="docs\edit-images\middleBg.png" />
+    <Content Include="docs\images\Merchant-Training-page-_01.jpg" />
+    <Content Include="docs\images\Merchant-Training-page-_02.jpg" />
+    <Content Include="docs\images\Merchant-Training-page-_04.jpg" />
+    <Content Include="docs\images\Merchant-Training-page-_06.jpg" />
+    <Content Include="docs\images\Merchant-Training-page-_07.jpg" />
+    <Content Include="docs\images\Merchant-Training-page-_09.jpg" />
+    <Content Include="docs\images\User_03-1.jpg" />
+    <Content Include="docs\images\User_051.jpg" />
+    <Content Include="docs\images\User_081.jpg" />
+    <Content Include="docs\MerchantTraining.html" />
+    <Content Include="Global.asax" />
+    <Content Include="pw_logo.png" />
+    <Content Include="Scripts\custom\jquery.blockUI.js" />
+    <Content Include="Scripts\custom\jquery.global.js" />
+    <Content Include="Scripts\custom\jquery.nivo.slider.pack.js" />
+    <Content Include="Scripts\custom\slides.min.jquery.js" />
+    <Content Include="Controllers\vssver2.scc" />
+    <Content Include="Models\vssver2.scc" />
+    <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\menu\hoverIntent.js" />
+    <Content Include="Scripts\menu\jquery.dcmegamenu.1.3.3.js" />
+    <Content Include="Scripts\menu\jquery.dcmegamenu.1.3.3.min.js" />
+    <Content Include="Scripts\menu\jquery.hoverIntent.minified.js" />
+    <Content Include="Scripts\menu\superfish.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\account-setupController.cs" />
+    <Compile Include="Controllers\careersController.cs" />
+    <Compile Include="Controllers\contact-usController.cs" />
+    <Compile Include="Controllers\homeController.cs" />
+    <Compile Include="Controllers\iso-agentController.cs" />
+    <Compile Include="Controllers\learning-resourcesController.cs" />
+    <Compile Include="Controllers\menuController.cs" />
+    <Compile Include="Controllers\partnersController.cs" />
+    <Compile Include="Controllers\products-servicesController.cs" />
+    <Compile Include="Controllers\settlementController.cs" />
+    <Compile Include="Controllers\support-centerController.cs" />
+    <Compile Include="Controllers\why-usController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\LinkHelper.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AccountSetupViewModel.cs" />
+    <Compile Include="Models\AgentLoginViewModel.cs" />
+    <Compile Include="Models\AreaViewModel.cs" />
+    <Compile Include="Models\MapViewModel.cs" />
+    <Compile Include="Models\MenuViewModel.cs" />
+    <Compile Include="Models\ProductsServicesViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-Bold-webfont.eot" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-Bold-webfont.ttf" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-Bold-webfont.woff" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-ExtraBold-webfont.eot" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-ExtraBold-webfont.ttf" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\Sansumi-ExtraBold-webfont.woff" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\todaysanshefop-light-webfont.woff" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\TodaySansHEFOP-light\todaysanshefop-light-webfont.woff2" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\font\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuaccount-setuppartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menucareerspartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menucontact-uspartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuhomepartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuiso-agentpartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menulearning-resourcespartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menumerchant-supportpartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menupartnerspartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuproducts-servicespartial\_1\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menusettlementpartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menusupport-centerpartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\menu\_menuwhy-uspartial\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\vssver2.scc" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\vssver2.scc" />
+    <Content Include="Content\themes\base\images\vssver2.scc" />
+    <Content Include="Content\themes\base\vssver2.scc" />
+    <Content Include="Content\vssver2.scc" />
+    <Content Include="docs\TermsConditionsPW1505.pdf" />
+    <Content Include="docs\training\mc\Anatomy of a Transaction.pdf" />
+    <Content Include="docs\training\mc\Avoiding Chargebacks- The Ideal Transaction.pdf" />
+    <Content Include="docs\training\mc\Best Practices Authorization Reversals.pdf" />
+    <Content Include="docs\training\mc\Best Practices Automated Fuel Dispenser Processing.pdf" />
+    <Content Include="docs\training\mc\Best Practices E-Commerce.pdf" />
+    <Content Include="docs\training\mc\Best Practices Lodging, Vehicle, Rental, and Cruise Lines.pdf" />
+    <Content Include="docs\training\mc\Chargeback Guide.pdf" />
+    <Content Include="docs\training\mc\Interchange Facts and Myths.dot" />
+    <Content Include="docs\training\mc\Interchange- Facilitating Benefits to Cardholders, Merchants &amp; Society.pdf" />
+    <Content Include="docs\training\mc\Interchange- Facilitating Benefits to Cardholders, Merchants and Society.pdf" />
+    <Content Include="docs\training\mc\MasterCard International U.S. Region Interchange Rates.pdf" />
+    <Content Include="docs\training\mc\MasterCard Rules.pdf" />
+    <Content Include="docs\training\mc\Minimum Maximum Transaction FAQ.pdf" />
+    <Content Include="docs\training\mc\Security Rules and Procedures.pdf" />
+    <Content Include="docs\training\mc\Transaction Processing Rules.pdf" />
+    <Content Include="docs\training\visa\15-April-2015-Visa-Rules-Public.pdf" />
+    <Content Include="docs\training\visa\acquirer-communication-to-merchants.pdf" />
+    <Content Include="docs\training\visa\chargeback-management-guidelines-for-visa-merchants.pdf" />
+    <Content Include="docs\training\visa\Improving-Dispute-Resolution_Merchants_2015-3-15.pdf" />
+    <Content Include="docs\training\visa\interlink-interchange-reimbursement-fees-april2013.pdf" />
+    <Content Include="docs\training\visa\interlink-operating-regulations.pdf" />
+    <Content Include="docs\training\visa\merchant-category-definitions-credit-card-cost-to-acquirers.pdf" />
+    <Content Include="docs\training\visa\sample-surcharge-disclosure-signage.pdf" />
+    <Content Include="docs\training\visa\surcharge-considerations-and-requirements.pdf" />
+    <Content Include="docs\training\visa\surcharging-faq-by-merchants.pdf" />
+    <Content Include="docs\training\visa\Visa-USA-Interchange-Reimbursement-Fees-2015-April-18.pdf" />
+    <Content Include="docs\training\visa\what-every-merchant-should-know-GCAR-VOL-091213-final.pdf" />
+    <Content Include="Helpers\vssver2.scc" />
+    <None Include="packages.config" />
+    <Content Include="pdf\6bgzms.php.bad" />
+    <Content Include="pdf\AmericanExpressProhibitedMerchantandOilCompaniesList.pdf" />
+    <Content Include="pdf\PW-XcaliberPressRelease2019Final.pdf" />
+    <Content Include="pdf\TermsConditionsPW1803-E.pdf" />
+    <Content Include="pdf\TermsConditionsPW1803-M.pdf" />
+    <Content Include="Scripts\custom\vssver2.scc" />
+    <Content Include="Scripts\menu\vssver2.scc" />
+    <Content Include="Scripts\vssver2.scc" />
+    <Content Include="Views\account_setup\index.cshtml" />
+    <Content Include="Views\account_setup\vssver2.scc" />
+    <Content Include="Views\careers\index.cshtml" />
+    <Content Include="Views\careers\vssver2.scc" />
+    <Content Include="Views\contact_us\index.cshtml" />
+    <Content Include="Views\contact_us\vssver2.scc" />
+    <Content Include="Views\home\contact.cshtml" />
+    <Content Include="Views\home\index.cshtml" />
+    <Content Include="Views\home\privacy_policy.cshtml" />
+    <Content Include="Views\home\terms_of_use.cshtml" />
+    <Content Include="Views\home\vssver2.scc" />
+    <Content Include="Views\learning_resources\index.cshtml" />
+    <Content Include="Views\learning_resources\vssver2.scc" />
+    <Content Include="Views\partners\index.cshtml" />
+    <Content Include="Views\partners\vssver2.scc" />
+    <Content Include="Views\products_services\hypercom.cshtml" />
+    <Content Include="Views\products_services\index.cshtml" />
+    <Content Include="Views\products_services\nurit-2085.cshtml" />
+    <Content Include="Views\products_services\nurit.cshtml" />
+    <Content Include="Views\products_services\poynt-5008.cshtml" />
+    <Content Include="Views\products_services\poynt.cshtml" />
+    <Content Include="Views\products_services\terminals.cshtml" />
+    <Content Include="Views\products_services\vssver2.scc" />
+    <Content Include="Views\settlement\index.cshtml" />
+    <Content Include="Views\settlement\vssver2.scc" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\vssver2.scc" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuAccount-SetupPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuCareersPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuContact-UsPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuHomePartial.cshtml" />
+    <Content Include="Views\Shared\_MenuLearning-ResourcesPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuMerchant-SupportPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuPartnersPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuProducts-ServicesPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuSettlementPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuSlider2Partial.cshtml" />
+    <Content Include="Views\Shared\_MenuSliderPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuSupport-CenterPartial.cshtml" />
+    <Content Include="Views\Shared\_MenuWhy-UsPartial.cshtml" />
+    <Content Include="Views\support_center\index.cshtml" />
+    <Content Include="Views\support_center\vssver2.scc" />
+    <Content Include="Views\vssver2.scc" />
+    <Content Include="Views\why_us\index.cshtml" />
+    <Content Include="Views\why_us\vssver2.scc" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1725</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1725/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

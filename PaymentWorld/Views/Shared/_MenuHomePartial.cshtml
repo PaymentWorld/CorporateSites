@@ -1,0 +1,34 @@
+﻿@model Codebase.Website.Models.MenuViewModel
+
+@using Codebase.Website.Helpers
+
+<div class="menu-nav-box">             
+    <ul id="menu-nav">
+        <li id="home-active">@Html.MenuActionLink("index", "home")</li>      
+        <li id="product-service">@Html.MenuActionLink("index", "products-services")</li>                  
+        <li id="account-setup">@Html.MenuActionLink("index", "account-setup")</li>
+        <li id="partner">@Html.MenuActionLink("index", "partners")</li>
+        <li id="support-center">@Html.MenuActionLink("index", "support-center")</li>                          
+        <li id="careers">@Html.MenuActionLink("index", "careers")</li>
+        <li id="contact-us">@Html.MenuActionLink("index", "contact-us")</li>                                                
+    </ul>
+ </div> 
+
+@{    
+    if (Model.ShowSlider)
+    {
+        @Html.Partial(Model.MenuSliderPartialView, Model);
+    }    
+}
+@*
+<div class="container">
+	<div id="slides">
+		<div class="slides_container">
+			<div>	 			
+				<a href="@Url.Content("~/products-services")" title="Products & Services" target="_self" ><img src="@Url.Content("~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuhomepartial/img_newNMC.jpg")" style="border:0px" width="1027px" height="195px" alt="Slide 1" /></a>
+			</div>		
+		</div>		
+	</div>    
+
+</div>
+*@

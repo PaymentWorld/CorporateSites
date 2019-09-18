@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "CAREERS";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSlider2Partial", partialView = "_MenuCareersPartial", showSlider = true });}
+
+<div class="content">
+    <div class="empty-box"></div>
+    <div class="bottomBox">
+        <div class="bottomBoxShadow">
+            <div class="squareTopleft"></div>
+            <div class="shadowTop"></div>
+            <div class="squareTopRight"></div>
+        </div>
+        <!--text title -->
+        <div class="textBox">
+            <div class="textBoxOne">
+                <div class="textBox-Second-format">CAREERS</div>                    
+            </div>          
+      </div>          
+        <div class="horizontal"></div>
+        <!--end text title --> 
+        <div class="bottomBoxEntry">
+            <div class="bottomBoxEntryOne">
+                @*<div class="bottomBoxEntryOnea"></div>*@
+                <div class="entry-second-format">
+                PaymentWorld is a fast paced organization at the forefront of payments processing. We take pride in remaining flexible and adapting to the 
+                ever changing environment of the payments industry. Our core focus is on product development and being the industry leader in client support.  
+                To inquire about becoming a part of the dynamic team at PaymentWorld, 
+                please submit your resume to <a href="mailto:info@paymentworld.com">info@paymentworld.com</a>.
+                </div>
+                @*<div class="bottomBoxEntryThirdb"></div> *@
+            </div>
+        </div>
+    </div>
+</div>

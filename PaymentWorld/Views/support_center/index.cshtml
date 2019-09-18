@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "SUPPORT CENTER";
+ }
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSlider2Partial", partialView = "_MenuSupport-CenterPartial", showSlider = true });}
+
+<div class="content">
+<div class="empty-box"></div>
+   <div class="bottomBox">
+    <div class="bottomBoxShadow">
+        <div class="squareTopleft"></div>
+        <div class="shadowTop"></div>
+        <div class="squareTopRight"></div>
+    </div>
+    <!--text title --> 
+     <div class="textBox">
+            <div class="textBoxOne">
+                <div class="textBox-Second-format">SUPPORT CENTER</div>                    
+            </div>          
+      </div>    
+    <div class="horizontal"></div>
+          <!--end text title --> 
+    <div class="bottomBoxEntry">
+          <div class="bottomBoxEntryOne">
+            @* <div class="bottomBoxEntryOnea"></div>*@
+              <div class="entry-second-format">
+                 At PaymentWorld we take great pride in our relationships with our merchants.  We understand that your business is your lifeline and that 
+                 you need more than a merchant account service provider, you need a support system.  Our goal is to take the ambiguity out of merchant processing by educating 
+                 our merchants on the many nuances involved in the transaction process.   Our staff of industry professionals invites you to call for any questions or assistance.  
+                 
+<br /><br />Call us today to realize the PW difference!  You can reach our Client Services team at <span class="textBoxTwophone">855.282.6510 </span> and receive technical support 24 hours a day, 365 days a year.  
+Thank you again for choosing PW.
+              </div>
+             @*<div class="bottomBoxEntryThirdb"></div>*@
+          </div>
+    </div>
+</div>
+</div>

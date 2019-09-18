@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "nurit";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSliderPartial", partialView = "_MenuProducts-ServicesPartial", showSlider = false });}
+
+
+<div class="content">
+
+    <h2>products - terminals - nurit</h2>
+
+    @Html.ActionLink("Nurit 2085", "terminals", "products-services", new { type = "nurit-2085" }, null)    
+
+</div>

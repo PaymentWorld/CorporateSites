@@ -1,0 +1,24 @@
+﻿@model Codebase.Website.Models.MenuViewModel
+
+@using Codebase.Website.Helpers
+
+<div class="menu-nav-box">             
+    <ul id="menu-nav">
+        <li id="home">@Html.MenuActionLink("index", "home")</li>      
+        <li id="product-service">@Html.MenuActionLink("index", "products-services")</li>                  
+        <li id="account-setup">@Html.MenuActionLink("index", "account-setup")</li>
+        <li id="partner">@Html.MenuActionLink("index", "partners")</li>
+        <li id="support-center-active">@Html.MenuActionLink("index", "support-center")</li>                         
+        <li id="careers">@Html.MenuActionLink("index", "careers")</li>
+        <li id="contact-us">@Html.MenuActionLink("index", "contact-us")</li>                                                
+    </ul>
+ </div> 
+
+@{    
+    if (Model.ShowSlider)
+    {
+        @Html.Partial(Model.MenuSliderPartialView, Model);
+    }    
+}
+
+

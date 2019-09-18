@@ -1,0 +1,93 @@
+﻿@using Codebase.Website.Helpers;
+
+@model Codebase.Website.Models.AgentLoginViewModel
+
+@{
+    ViewBag.Title = "PARTNERS";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSlider2Partial", partialView = "_MenuPartnersPartial", showSlider = true });} 
+
+<div class="content">
+    <div class="empty-box"></div>
+    <div class="bottomBox">
+        <div class="bottomBoxShadow">
+            <div class="squareTopleft"></div>
+            <div class="shadowTop"></div>
+            <div class="squareTopRight"></div>
+        </div>
+        <!--text title --> 
+        <div class="textBox">
+            <div class="textBoxOne">
+                <div class="textBoxOnea"></div>
+                <div class="textBoxOneb">ISO BENEFITS</div>                        
+            </div>
+
+            <div class="textBoxTwo">
+                <div class="textBoxTwoa">AGENT BENEFITS</div>                
+            </div>
+
+            <div class="textBoxThird">
+            <div class="textBoxThirda">LOGIN</div>
+            <div class="textBoxThirdb"></div>
+            </div>      
+         </div>       
+        <div class="horizontal"></div>
+        <!--end text title --> 
+        <div class="bottomBoxEntry">
+            <div class="bottomBoxEntryOne">
+                <div class="bottomBoxEntryOnea"></div>                
+                   <div class="OnebTestone">- BIN Sponsorship Program<br />- White Labeled Product Offering<br />- Customized Income Reports<br />- Personalized Statements</div>
+           </div>           
+           <div class="bottomBoxEntryTwo">
+             <div class="bottomBoxEntryOnea"></div>
+                <div class="OnebTestone">- Full Training Program For All Agents<br /> - Real Time Approval Status<br />- Online Resource Center<br />- High Level Sales Support</div>            
+          </div>            
+            <div class="bottomBoxEntryThird">
+                <div class="entrybox-four-format-right">                    
+                    @using (Html.BeginForm(null, null, FormMethod.Post, new { id= "loginForm", @action = System.Configuration.ConfigurationManager.AppSettings.Get("OnlineResourceCenterUrl") }))
+                    {                                                                                                        
+                        <table style="width:82%">
+                            
+                            <tr>
+                                <td colspan="2">        
+                                    @Html.TextBox("faketxtUserID", "username", new { @style = "color: #7c8293; width:203px; height:18px", @maxlength = "25" }) 
+                                    @Html.TextBoxFor(m => m.txtUserID, new { @style = "width:203px; height:18px; display:none", @maxlength = "25" })
+                                </td>
+                                <td style="width:10px">@Html.ValidationMessageFor(m => m.txtUserID)</td>
+                            </tr>
+                            <tr>
+                             <td colspan="2">
+                                @Html.TextBox("faketxtPwd", "password", new { @style = "color: #7c8293; width:203px; height:18px;", @maxlength = "25" })                                     
+                                @Html.PasswordFor(m => m.txtPwd, new { @style = "width:203px; height:18px; display:none", @maxlength = "25" })
+                               
+                             </td>
+                             <td style="width:10px">
+                                @Html.ValidationMessageFor(m => m.txtPwd)
+                             </td>
+                            </tr>
+
+                            <tr>
+                                <td >
+                                    @Html.SubmitButtonImage("login", null, "display:inline;cursor:hand;cursor:pointer")
+                                    @Html.SubmitButtonImage("login-ref", null, "display:none;cursor:hand;cursor:pointer") 
+                                </td>
+                                @*<td style="width:18px"></td>*@
+                                <td style=" float:none; padding-right:11px;" >
+                                    @*
+                                    <a href="@System.Configuration.ConfigurationManager.AppSettings.Get("OnlineResourceCenterUrlForgot")" class="one" title="forgot password">forgot password </a><br />
+                                    <a href="@System.Configuration.ConfigurationManager.AppSettings.Get("OnlineResourceCenterUrlRegister")" class="one" title="register">register</a>                                
+                                    *@
+                                </td>
+                                <td style="width:10px"></td>
+
+                            </tr>
+                        </table>                                              
+                    }
+                </div>
+                <div class="bottomBoxEntryThirdb"></div>
+            </div>      
+        </div>     
+     
+    </div>
+</div>

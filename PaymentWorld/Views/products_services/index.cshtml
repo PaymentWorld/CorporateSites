@@ -1,0 +1,562 @@
+﻿@using Codebase.Website.Helpers
+
+@model Codebase.Website.Models.ProductsServicesViewModel
+
+<script type="text/javascript">
+    $(function () {
+        $('#slides_p').slides({
+            generateNextPrev: false,
+            container: 'slides_container_p',
+            start: @Model.StartIndex
+            //play: 25000
+        });
+    });
+</script>
+@{
+    ViewBag.Title = "PRODUCTS & SERVICES";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSlider2Partial", partialView = "_MenuProducts-ServicesPartial", showSlider = false });}
+
+<div class="content">
+    <div class="empty-box"></div>
+    <div class="container_p2">
+        <div id="slides_p">
+            <div class="slides_container_p">
+                <div class="content-box-banner-no" style="display:none">
+                    <div class="content-banner">
+                        <a style="display:block">
+                            <map id="ca-vt-arp" name="ca-vt-arp">
+                                <area shape="rect" coords="0,0,342,195" title="Merchant Services" alt="Merchant Services" href="@Url.Content("~/products-services/index/business-cash-advance")" />
+                                <area shape="rect" coords="342,0,682,195" title="Virtual Terminal" alt="Virtual Terminal" href="@Url.Content("~/products-services/index/virtual-terminal")" />
+                                <area shape="rect" coords="682,0,1027,195" title="ATM Retail Program" alt="ATM Retail Program" href="@Url.Content("~/products-services/index/atm-retail-program")" />
+                            </map>
+                            @*<img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_products_1st_page.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" usemap="#ca-vt-arp" />*@
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/img_products_page1.png" style="border:0px" width="1027px" height="195px" alt="Products & Services" usemap="#ca-vt-arp" />
+                        </a>
+                    </div>
+                    <div class="content-separator">
+                        <div class="content-box-top-lt"></div>
+                        <div class="content-box-top"></div>
+                        <div class="content-box-top-rt"></div>
+                    </div>
+                    <div class="content-box-hdr">
+                        <div class="box-hdr-col-3-00-1">
+                            <div class="content-box-hdr-lt"></div>
+                            <div class="box-hdr-col-3-00-1-hdr">MERCHANT SERVICES</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-2">
+                            <div class="box-hdr-col-3-00-2-hdr">VIRTUAL TERMINAL</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-3">
+                            <div class="box-hdr-col-3-00-3-hdr">ATM RETAIL PROGRAM</div>
+                            <div class="content-box-hdr-rt"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-box-body">
+                        <div class="box-body-col-3-00-1">
+                            <div class="content-box-body-lt"></div>
+                            <div class="box-body-col-3-00-1-body padding-lt-none">
+                                <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                                    <div class="img-creditCard margin-img"></div>
+                                </div>
+                                <div class="box-body-col-3-00-1-body-col-2-2">
+                                    - Accept Credit Cards<br />
+                                    - Easy approval process<br />
+                                    - Lowest rates<br />
+                                </div>
+                                <div class="img-more">
+                                    @Html.ActionLinkImage("index", "products-services", "images/btn_learnMore.png", "Learn More", new { type = "business-cash-advance" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-2">
+                            <div class="box-body-col-3-00-2-body padding-lt-none">
+                                <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                                    <div class="img-vt margin-img"></div>
+                                </div>
+                                <div class="box-body-col-3-00-1-body-col-2-2">
+                                    - Accept payments via telephone<br />
+                                    - Accept Internet payments<br />
+                                    - Recurring billing capabilities<br />
+                                </div>
+                                <br />
+                                <div class="img-more">
+                                    @Html.ActionLinkImage("index", "products-services", "images/btn_learnMore.png", "Learn More", new { type = "virtual-terminal" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-3">
+                            <div class="box-body-col-3-00-3-body padding-lt-none">
+                                <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                                    <div class="img-atm margin-img"></div>
+                                </div>
+                                <div class="box-body-col-3-00-1-body-col-2-2">
+                                    - Increase profit potential<br />
+                                    - Attract new customers<br />
+                                    - Easy to manage<br />
+                                    - Various options available<br />
+                                </div>
+                                <div class="img-more">
+                                    @Html.ActionLinkImage("index", "products-services", "images/btn_learnMore.png", "Learn More", new { type = "atm-retail-program" })
+                                </div>
+                            </div>
+                            <div class="content-box-body-rt"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                @*MERCHANT SERVICES*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div class="content-banner">
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_product_merchant_services.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="content-separator">
+                        <div class="content-box-top-lt"></div>
+                        <div class="content-box-top"></div>
+                        <div class="content-box-top-rt"></div>
+                    </div>
+                    <div class="content-box-hdr">
+                        <div class="box-hdr-col-3-00-1">
+                            <div class="content-box-hdr-lt">
+                            </div>
+                            <div class="box-hdr-col-3-00-1-hdr">MERCHANT SERVICES</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-2">
+                            <div class="box-hdr-col-3-00-2-hdr">NOW YOU CAN</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-3">
+                            <div class="box-hdr-col-3-00-3-hdr" style="padding-left: 0px;">REALIZE THE BENEFITS</div>
+                            <div class="content-box-hdr-rt"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-box-body">
+                        <div class="box-body-col-3-00-1">
+                            <div class="content-box-body-lt"></div>
+                            <div class="box-body-col-3-00-1-body">
+                                PaymentWorld takes pride in being a leader in the payment processing industry.  We are rich in product offerings including credit card processing, IT integration, retail point of sale terminals and gateway services.
+                                This enables us to empower our merchants to gain momentum in moving and growing their own businesses.
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-2-body padding-lt-none" style="width: 280px;">
+                            <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                                <div class="margin-img">
+                                    <img src="../../Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/img-poynt.png" style="width: 92px;" />
+                                </div>
+                            </div>
+                            <div class="box-body-col-3-00-1-body-col-2-2" style="width: 63%;">
+                                - Accept payments securely<br />
+                                - Use practical POS<br />
+                                - Access real time reports<br />
+                                - Use loyalty programs<br />
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-3">
+                            <div class="box-body-col-3-00-3-body padding-lt-none" style="padding-left: 5px; width: 350px;">
+                                <div class="box-body-col-3-00-1-body-col-2-1 align-ctr" style="width: 21%;">
+                                    <div class="margin-img">
+                                        <img src="../../Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/img-pw_shield.png" style="width: 45px;" />
+                                    </div>
+                                </div>
+                                <div class="box-body-col-3-00-1-body-col-2-2" style="width: 79%;">
+                                    - Offer more payment options to your customers<br />
+                                    - Protect your business from lost revenue<br />
+                                    - Reduce fraud and simplify payment processes<br />
+                                    - Monitor your transactions real time<br />
+                                    - Set automatic recurring billing<br />
+                                </div>
+                            </div>
+                            <div class="content-box-body-rt"></div>
+                        </div>
+                    </div>
+                </div>
+
+                @*VT*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div>
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_product_vt.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="content-separator">
+                        <div class="content-box-top-lt"></div>
+                        <div class="content-box-top"></div>
+                        <div class="content-box-top-rt"></div>
+                    </div>
+                    <div class="content-box-hdr">
+                        <div class="box-hdr-col-3-00-1">
+                            <div class="content-box-hdr-lt"></div>
+                            <div class="box-hdr-col-3-00-1-hdr">VIRTUAL TERMINAL</div>
+                        </div>
+                        <div class="box-hdr-col-2-01-2">
+                            <div class="box-hdr-col-2-01-2-hdr">BENEFITS AND FEATURES OF THE VIRTUAL TERMINAL</div>
+                            <div class="content-box-hdr-rt"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-box-body">
+                        <div class="box-body-col-3-00-1">
+                            <div class="content-box-body-lt"></div>
+                            <div class="box-body-col-3-00-1-body">
+                                The Virtual Terminal is a “anytime, anywhere” solution to accept payments on your terms.  This proprietary web-based application enables merchants to accept credit, debit, ACH and more.  From billing recurring memberships to accepting cards at an industry tradeshow, the PaymentWorld&#8482 Virtual Terminal will give you the flexibility you need to take your business to the next level.
+                            </div>
+                        </div>
+                        <div class="box-body-col-2-01-2">
+                            <div class="box-body-col-2-01-2-body">
+                                Secure, reliable, and PCI certified<br />
+                                User friendly and inexpensive<br />
+                                Recurring billing functionality<br />
+                                Access to transactions online 24/7/365<br />
+                                Optional plug-in card reader to swipe cards using your computer<br />
+                                Compatible with your existing printer or external printer<br />
+                                USB debit pin-pad to accept debit cards<br />
+                                Multiple user access<br />
+                            </div>
+                            <div class="content-box-body-rt"></div>
+                        </div>
+                    </div>
+                </div>
+
+                @*GIFT CARDS*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div class="content-banner">
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_product_gift.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="content-separator">
+                        <div class="content-box-top-lt"></div>
+                        <div class="content-box-top"></div>
+                        <div class="content-box-top-rt"></div>
+                    </div>
+                    <div class="content-box-hdr">
+                        <div class="box-hdr-col-3-00-1">
+                            <div class="content-box-hdr-lt"></div>
+                            <div class="box-hdr-col-3-00-1-hdr">CUSTOMERS WANT THEM</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-2">
+                            <div class="box-hdr-col-3-00-2-hdr">YOU CAN PROVIDE THEM</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-3">
+                            <div class="box-hdr-col-3-00-3-hdr">HOW DO YOU BENEFIT?</div>
+                            <div class="content-box-hdr-rt"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-box-body">
+                        <div class="box-body-col-3-00-1">
+                            <div class="content-box-body-lt"></div>
+                            <div class="box-body-col-3-00-1-body">
+
+                                <div class="gc-top">
+                                    <div class="gc-top-lt">
+                                        77% of<br />
+                                        consumers bought<br />
+                                        <span class="gc-txt">GIFT CARDS</span>
+                                        <br />
+                                        <br />
+                                    </div>
+                                    <div class="gc-top-rt">
+                                        <br />
+                                        &nbsp;&nbsp;2010
+                                    </div>
+                                </div>
+
+                                <div class="gc-image">&nbsp;</div>
+
+                                <div class="gc-bot">
+                                    <div class="gc-bot-lt">
+                                        &nbsp;&nbsp;2009
+                                    </div>
+                                    <div class="gc-bot-rt">
+                                        <span class="gc-txt">$87 BILLION</span><br />
+                                        estimated value<br />
+                                        of <span class="gc-txt">GIFT CARDS</span><br />
+                                        purchased in the U.S.
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-2">
+                            <div class="box-body-col-3-00-2-body">
+                                Low cost setup options for businesses of all sizes<br />
+                                Custom designed cards with your logo<br />
+                                Quick turnaround time to keep up with demand<br /><br />
+                                <div class="note2">
+                                    <div class="note2-lt">SOURCES:</div>
+                                    <div class="note2-rt">
+                                        Reuters, AP Poll,<br />
+                                        Los Angeles Times,<br />
+                                        Forbes, CNET News,<br />
+                                        Bloomberg Businessweek
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-3">
+                            <div class="box-body-col-3-00-3-body">
+                                Attract more customers and extend your outreach<br />
+                                Strengthen your relationship with customers<br />
+                                Reduce exchanges and returns<br />
+                                Unredeemed amount stays on the card<br />
+                                Increase your sales:<br />
+                                <ul style="list-style-type:none; margin-left:0px; padding-left:5px; padding-top:0px; margin-top:0px;">
+                                    <li>
+                                        - Gift card purchases are between 20% and 50%<br />&nbsp;&nbsp;higher than the average purchase price
+                                    </li>
+                                    <li>
+                                        - 71% of gift card recipients spend more than the<br />&nbsp;&nbsp;value of the card
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content-box-body-rt"></div>
+                        </div>
+                    </div>
+                </div>
+
+                @*LOYALTY*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div class="content-banner">
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_product_loyalty-rewards.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="content-separator">
+                        <div class="content-box-top-lt"></div>
+                        <div class="content-box-top"></div>
+                        <div class="content-box-top-rt"></div>
+                    </div>
+                    <div class="content-box-hdr">
+                        <div class="box-hdr-col-3-00-1">
+                            <div class="content-box-hdr-lt"></div>
+                            <div class="box-hdr-col-3-00-1-hdr">LOYALTY/REWARDS CARDS</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-2">
+                            <div class="box-hdr-col-3-00-2-hdr">PROGRAM OPTIONS</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-3">
+                            <div class="box-hdr-col-3-00-3-hdr">MERCHANT BENEFITS</div>
+                            <div class="content-box-hdr-rt"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-box-body">
+                        <div class="box-body-col-3-00-1">
+                            <div class="content-box-body-lt"></div>
+                            <div class="box-body-col-3-00-1-body">
+                                By understanding the benefits that drive customer loyalty, merchants can harness a customer’s true buying potential.<br /><br />
+                                With PaymentWorld’s flexible Loyalty / Rewards program you are able to tailor rewards to customer’s specific needs.
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-2">
+                            <div class="box-body-col-3-00-2-body">
+                                INSTANT REWARDS – each dollar earns a point
+                                <span class="sp-lt-pad-25">toward a specific reward</span>
+                                <br />
+                                <br />
+                                COLLECTED POINTS – choose to reward points
+                                <span class="sp-lt-pad-25">on a different scale rather than 1 to 1</span>
+                                <br />
+                                <br />
+                                VISIT REWARDS – each visit (sale) earns a point.
+                                <span class="sp-lt-pad-25">Customers are awarded prizes when a</span>
+                                <span class="sp-lt-pad-25">certain number of points are reached</span>
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-3">
+                            <div class="box-body-col-3-00-3-body">
+                                Attract Customers With Prizes<br />
+                                Know Your Customers Habits<br />
+                                More Repeat Customers Than Ever<br />
+                                Custom Card Designs<br />
+                                Online Reporting
+                            </div>
+                            <div class="content-box-body-rt"></div>
+                        </div>
+                    </div>
+                </div>
+
+                @*ATM*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div class="content-banner">
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_product_atm.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="content-separator">
+                        <div class="content-box-top-lt"></div>
+                        <div class="content-box-top"></div>
+                        <div class="content-box-top-rt"></div>
+                    </div>
+                    <div class="content-box-hdr">
+                        <div class="box-hdr-col-3-00-1">
+                            <div class="content-box-hdr-lt"></div>
+                            <div class="box-hdr-col-3-00-1-hdr">ATM RETAIL PROGRAM</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-2">
+                            <div class="box-hdr-col-3-00-2-hdr">BENEFITS</div>
+                        </div>
+                        <div class="box-hdr-col-3-00-3">
+                            <div class="box-hdr-col-3-00-3-hdr">BUY OR LEASE</div>
+                            <div class="content-box-hdr-rt"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-box-body">
+                        <div class="box-body-col-3-00-1">
+                            <div class="content-box-body-lt"></div>
+                            <div class="box-body-col-3-00-1-body">
+                                PaymentWorld offers a flexible and comprehensive ATM Retail Program tailored to the specific needs of the store operator.  This turn-key solution includes full installation, monitoring, training, online reporting, and servicing.  PaymentWorld has options available for purchase, lease, and ATM placement.
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-2">
+                            <div class="box-body-col-3-00-2-body">
+                                Improve cash flow<br />
+                                Increase foot traffic<br />
+                                Build customer loyalty<br />
+                                Additional income source<br />
+                                Increase customer convenience<br />
+                                Gain a competitive edge<br />
+                                <div class="note">
+                                    <div class="note-lt">NOTE:</div>
+                                    <div class="note-rt">
+                                        ** OPTIONAL WIRELESS COMMUNICATION CONNECTIVITY IS AVAILABLE<br />
+                                        ** MAINTENANCE PLANS AVAILABLE FOR MERCHANT-OWNED ATMs
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body-col-3-00-3">
+                            <div class="box-body-col-3-00-3-body">
+                                PURCHASE PLAN<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Merchant retains surcharge revenue)<br />
+                                VENDOR PLACES TERMINAL<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Revenue split on surcharge)<br />
+                                VENDOR PLAN<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Retain a percentage of the surcharge)<br />
+
+                            </div>
+                            <div class="content-box-body-rt"></div>
+                        </div>
+                    </div>
+                </div>
+
+                @*POS RETAIL SYSTEMS; E-COMMERCE; PCI COMPLIANCE*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div>
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_main_acceptCC.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="bottomBoxShadow">
+                        <div class="squareTopleft"></div>
+                        <div class="shadowTop"></div>
+                        <div class="squareTopRight"></div>
+                    </div>
+                    <div class="textBox">
+                        <div class="textBoxOne">
+                            <div class="textBoxOnea"></div>
+                            <div class="textBoxOneb">POS RETAIL SYSTEMS</div>
+                        </div>
+
+                        <div class="textBoxTwo">
+                            <div class="textBoxTwoa">E-COMMERCE</div>
+                        </div>
+
+                        <div class="textBoxThird">
+                            <div class="textBoxThirda">PCI COMPLIANCE</div>
+                            <div class="textBoxThirdb"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="bottomBoxEntry">
+                        <div class="bottomBoxEntryOne">
+                            <div class="bottomBoxEntryOnea"></div>
+                            <div class="bottomBoxEntryOneb">
+                                <div class="OnebImage"><div class="OnebImagec"></div></div>
+                                <div class="OnebTest">- Easy to use screen interface<br />- Integrated system<br />- Process credit and gift cards<br />- Manage sales and inventory </div>
+                            </div>
+                        </div>
+                        <div class="bottomBoxEntryTwo">
+                            <div class="bottomBoxEntryTwoa">
+                                <div class="imageTwoc"></div>
+                            </div>
+                            <div class="textTwoa">- Increase sales over the internet <br />- Expand your operating hours<br />- Run your business more efficiently</div>
+
+                        </div>
+                        <div class="bottomBoxEntryThird">
+                            <div class="bottomBoxEntryThirda">
+                                <div class="imageThirdc"></div>
+                            </div>
+                            <div class="textThirda">- Certify for VISA/MC regulations <br />- Affordable and easy to use tools<br />- Eliminate hefty fines <br />- Available for all merchant types</div>
+                            <div class="bottomBoxEntryThirdb"></div>
+                        </div>
+                    </div>
+                </div>
+
+                @*ONLINE REPORTING; CHECK 21 & ACH; QUICKBOOK SOLUTIONS*@
+                <div class="content-box-banner-no" style="display:none">
+                    <div>
+                        <a style="display:block" href="@Url.Content("~/products-services")">
+                            <img src="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/menu/_menuproducts-servicespartial/_1/img_main_processingSolution.jpg" style="border:0px" width="1027px" height="195px" alt="Products & Services" />
+                        </a>
+                    </div>
+                    <div class="bottomBoxShadow">
+                        <div class="squareTopleft"></div>
+                        <div class="shadowTop"></div>
+                        <div class="squareTopRight"></div>
+                    </div>
+                    <div class="textBox">
+                        <div class="textBoxOne">
+                            <div class="textBoxOnea"></div>
+                            <div class="textBoxOneb">ONLINE REPORTING</div>
+                        </div>
+                        <div class="textBoxTwo">
+                            <div class="textBoxTwoa">CHECK 21 & ACH</div>
+                        </div>
+
+                        <div class="textBoxThird">
+                            <div class="textBoxThirda">QUICKBOOKS SOLUTIONS</div>
+                            <div class="textBoxThirdb"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="bottomBoxEntry">
+                        <div class="bottomBoxEntryOne">
+                            <div class="bottomBoxEntryOnea"></div>
+                            <div class="bottomBoxEntryOneb">
+                                <div class="OnebImage"><div class="OnebImageb"></div></div>
+                                <div class="OnebTest">- Manage all transaction types<br />- Track daily, weekly & monthly sales<br />- Credits, refunds & void transactions<br />- Expansive reporting capabilities</div>
+                            </div>
+                        </div>
+                        <div class="bottomBoxEntryTwo">
+                            <div class="bottomBoxEntryTwoa">
+                                <div class="imageTwob"></div>
+                            </div>
+                            <div class="textTwoa">- Convert checks to transactions <br />- Eliminate deposit slips <br />- No trips to the bank <br />- Save time and money </div>
+
+                        </div>
+                        <div class="bottomBoxEntryThird">
+                            <div class="bottomBoxEntryThirda">
+                                <div class="imageThirdb"></div>
+                            </div>
+                            <div class="textThirda">- Instant approvals or declines<br />- USB card reader for swiped rates<br />- Improve accounting accuracy </div>
+                            <div class="bottomBoxEntryThirdb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="prev"><img src="@Url.Content("~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/btn_left_arrow_image.png")" width="27px" height="198px" style="border:0px" alt="Previous" title="Previous" /></a>
+            <a href="#" class="next"><img src="@Url.Content("~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/btn_right_arrow_image.png")" width="27px" height="198px" style="border:0px" alt="Next" title="Next" /></a>
+        </div>
+
+    </div>
+</div>

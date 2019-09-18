@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "terminals";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSliderPartial", partialView = "_MenuProducts-ServicesPartial", showSlider = false });}
+
+<div class="content">
+
+    <h2>products - terminals</h2>
+
+    @Html.ActionLink("Hypercom", "terminals", "products-services", new { type = "hypercom" }, null)<br />
+    @Html.ActionLink("Nurit", "terminals", "products-services", new { type = "nurit" }, null)<br />
+
+    <h1>special rates on @Html.ActionLink("Nurit 2085", "terminals", "products-services", new { type = "nurit-2085" }, null)</h1>    
+
+</div>
+

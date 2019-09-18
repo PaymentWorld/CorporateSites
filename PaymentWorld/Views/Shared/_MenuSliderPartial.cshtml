@@ -1,0 +1,28 @@
+﻿@model Codebase.Website.Models.MenuViewModel
+
+<div id="wrapper">    
+    <div class="slider-wrapper theme-default">
+        <div class="ribbon"></div>
+        <div id="slider" class="nivoSlider">
+
+            @foreach (Codebase.Website.Models.LinkTag linkTag in Model.ImageList)
+            {
+                 <img src="@Url.Content(@linkTag.Src)" alt="" />
+            }
+            
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(window).load(function () {
+        var total = $('#slider img').length;
+        var rand = Math.floor(Math.random() * total);
+        $('#slider').nivoSlider({
+            startSlide: rand,
+            /*effect: 'slideInRight'*/
+            effect: 'random',
+            pauseTime: 7000
+        });
+    });
+</script>

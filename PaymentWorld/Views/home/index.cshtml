@@ -1,0 +1,90 @@
+﻿@using Codebase.Website.Helpers
+
+@{
+    ViewBag.Title = "HOME";
+}
+
+@{Html.RenderAction("WebsiteMenu",
+                    "menu",
+                    new
+                    {
+                        menuSliderPartialView = "_MenuSlider2Partial",
+                        partialView = "_MenuHomePartial",
+                        showSlider = true
+                     });}
+                  
+ <div class="content">
+    <div class="empty-box"></div>
+    <div class="content-box">
+        <div class="content-separator">
+            <div class="content-box-top-lt"></div>
+            <div class="content-box-top"></div>
+            <div class="content-box-top-rt"></div>
+        </div> 
+        <div class="content-box-hdr">
+            <div class="box-hdr-col-3-00-1">
+                <div class="content-box-hdr-lt"></div>
+                <div class="box-hdr-col-3-00-1-hdr">MERCHANT SERVICES</div>
+            </div>
+            <div class="box-hdr-col-3-00-2">
+                <div class="box-hdr-col-3-00-2-hdr">VIRTUAL TERMINAL</div>                      
+            </div>
+            <div class="box-hdr-col-3-00-3">
+                <div class="box-hdr-col-3-00-3-hdr">ATM RETAIL PROGRAM</div>
+                <div class="content-box-hdr-rt"></div>
+            </div>      
+        </div>
+        <div class="horizontal"></div>                
+        <div class="content-box-body">
+            <div class="box-body-col-3-00-1">                        
+                <div class="content-box-body-lt"></div>
+                <div class="box-body-col-3-00-1-body padding-lt-none">
+                    <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                        <div class="img-creditCard margin-img"></div>
+                    </div>
+                    <div class="box-body-col-3-00-1-body-col-2-2">
+                        - Accept Credit Cards<br />
+                        - Easy approval process<br />
+                        - Lowest rates<br />
+                    </div>
+                    <div class="img-more">
+                        @Html.ActionLinkImage("index", "products-services", "images/btn_learnMore.png", "Learn More", new { type = "business-cash-advance" })                                        
+                    </div>
+                </div>
+            </div>                        
+            <div class="box-body-col-3-00-2">
+                <div class="box-body-col-3-00-2-body padding-lt-none">                        
+                    <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                        <div class="img-vt margin-img"></div>
+                    </div>
+                    <div class="box-body-col-3-00-1-body-col-2-2">                        
+                        - Accept payments via telephone<br />
+                        - Accept Internet payments<br />
+                        - Recurring billing capabilities<br />
+                    </div>
+                    <br />
+                    <div class="img-more">
+                        @Html.ActionLinkImage("index", "products-services", "images/btn_learnMore.png", "Learn More", new { type = "virtual-terminal" })
+                    </div>
+                </div>                                               
+            </div>
+            <div class="box-body-col-3-00-3">                        
+                <div class="box-body-col-3-00-3-body padding-lt-none">                            
+                    <div class="box-body-col-3-00-1-body-col-2-1 align-ctr">
+                        <div class="img-atm margin-img"></div>
+                    </div>
+                    <div class="box-body-col-3-00-1-body-col-2-2">
+                        - Increase profit potential<br />
+                        - Attract new customers<br />
+                        - Easy to manage<br />
+                        - Various options available<br />
+                    </div>
+                    <div class="img-more">
+                        @Html.ActionLinkImage("index", "products-services", "images/btn_learnMore.png", "Learn More", new { type = "atm-retail-program" })
+                    </div>
+                </div>
+                <div class="content-box-body-rt"></div>
+            </div>      
+        </div>     
+    </div>
+</div>

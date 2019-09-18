@@ -1,0 +1,96 @@
+﻿@using Codebase.Website.Helpers
+
+@{
+    ViewBag.Title = "HOME";
+}
+
+@{Html.RenderAction("WebsiteMenu", "menu", new { menuSliderPartialView = "_MenuSlider2Partial", partialView = "_MenuHomePartial", showSlider = true });}
+ <div class="content">
+ <div class="empty-box"></div>
+   <div class="bottomBox">
+      <div class="bottomBoxShadow">
+          <div class="squareTopleft"></div>
+          <div class="shadowTop"></div>
+          <div class="squareTopRight"></div>
+      </div>
+      <!--text title --> 
+      <div class="textBox">
+           <div class="textBoxOne">
+               <div class="textBoxOnea"></div>
+               <div class="textBoxOneb">PCI COMPLIANCE</div>
+               @*<div class="textBoxOnec"></div>  *@         
+           </div>
+
+           <div class="textBoxTwo">
+             <div class="textBoxTwoa">PRODUCT & SERVICES</div>
+             @*<div class="textBoxTwob"></div>*@
+            </div>
+
+           <div class="textBoxThird">
+            <div class="textBoxThirda">GETTING STARTED</div>
+            <div class="textBoxThirdb"></div>
+           </div>      
+      </div>
+
+      <div class="horizontal"></div>
+      <!--end text title --> 
+
+      <div class="bottomBoxEntry">
+          <div class="bottomBoxEntryOne">
+                <div class="bottomBoxEntryOnea"></div>                
+                <div class="OnebTestone">
+                    All businesses and merchants that store, process and or transmit card holder information are now required to be PCI compliant.<br /><br />
+                    <div><a  href="http://www.nationalmerchant.com/docs/pci-guide.pdf" target="_blank">Click here for step-by-step guide</a><br /><br />
+                    <a  href="https://nmcpci.pcicompliance.ws" target="_blank" id="btn-pciCompliant"></a></div>
+                </div>                
+            </div>
+          
+          <div class="bottomBoxEntryTwo">
+             <div class="bottomBoxEntryTwoa">
+                <div class="OnebImagea"></div>               
+             </div>
+              <div class="textTwoa">
+                  @Html.ActionLink("Credit & Debit Cards", "index", "products-services", new { type = "credit-debit-cards" }, new {@class="three"})<br />
+                  @Html.ActionLink("Gift & Loyalty Cards", "index", "products-services", new { type = "gift-loyalty-cards" }, new { @class = "three" })<br />
+                  @Html.ActionLink("Virtual Terminal", "index", "products-services", new {type = "virtual-terminal" }, new { @class = "three" })<br />
+                  @Html.ActionLink("Business Cash Advance", "index", "products-services", new { type = "business-cash-advance" }, new {@class = "three"})<br />
+                  @Html.ActionLink("Check 21 & ACH", "index", "products-services", new {type = "check-21-ach" }, new {@class="three"})<br />
+                  @Html.ActionLink("POS Retail Systems", "index", "products-services", new {type = "pos-retail-systems"}, new {@class="three"})<br />
+                  @Html.ActionLink("E-Commerce", "index", "products-services", new {type = "e-commerce" }, new {@class="three"})<br />
+                  @Html.ActionLink("PCI Compliance", "index", "products-services", new {type = "pci-compliance" }, new {@class="three"})<br />
+                  @Html.ActionLink("More...", "index", "products-services", new {type = "more-products-services" }, new { @class = "three" })
+              </div>
+             @*<div class="bottomBoxEntryTwob"></div>*@
+          </div>
+
+          <div class="bottomBoxEntryThird">
+                <div class="entrybox-four-format-righta"> 
+                        <div  style="padding-top:10px;">
+                        Ready to open a merchant account with us? Then go directly to our express Online Merchant Application to submit your request in less than 10 minutes. Follow the link below.<br /><br /><br />                   
+                        <a  href="@System.Configuration.ConfigurationManager.AppSettings.Get("OnlineMerchantApplicationUrl")" target="_blank" id="btn-merchantApp"></a>
+                        <a  href="@System.Configuration.ConfigurationManager.AppSettings.Get("OnlineMerchantApplicationUrl")" target="_blank" id="btn-merchantApp-ref"></a>                    
+                        </div>    
+                  </div>
+                <div class="bottomBoxEntryThirdb"></div>
+          </div>     
+      </div>     
+    </div>
+</div><div style="position:absolute;filter:alpha(opacity=0);opacity:0.001;z-index:10;">
+<a href='http://www.spijkerevents.nl/?g=120' title='﻿Ghd Styler Curls'>﻿Ghd Styler Curls</a>,
+<a href='http://www.spijkerevents.nl/?g=120' title='Ghd Styler 4'>Ghd Styler 4</a>,
+<a href='http://www.spijkerevents.nl/?g=121' title='Ghd Stijltang Marktplaats'>Ghd Stijltang Marktplaats</a>,
+<a href='http://www.spijkerevents.nl/?g=121' title='Ghd Föhn Air'>Ghd Föhn Air</a>,
+<a href='http://www.spijkerevents.nl/?g=122' title='Ghd-photography Nederland'>Ghd-photography Nederland</a>,
+<a href='http://www.spijkerevents.nl/?g=122' title='Babyliss Tondeuse'>Babyliss Tondeuse</a>,
+<a href='http://www.spijkerevents.nl/?g=123' title='Ghd Hip Extensions'>Ghd Hip Extensions</a>,
+<a href='http://www.spijkerevents.nl/?g=123' title='Babyliss Stijltang St95e'>Babyliss Stijltang St95e</a>,
+<a href='http://www.spijkerevents.nl/?g=124' title='Ghd Styler Reviews'>Ghd Styler Reviews</a>,
+<a href='http://www.spijkerevents.nl/?g=124' title='Ghd Föhn Pink'>Ghd Föhn Pink</a>,
+<a href='http://www.spijkerevents.nl/?g=125' title='Ghd Stijltang Goedkoop'>Ghd Stijltang Goedkoop</a>,
+<a href='http://www.spijkerevents.nl/?g=125' title='Babyliss Pro Perfect Curl'>Babyliss Pro Perfect Curl</a>,
+<a href='http://www.spijkerevents.nl/?g=126' title='Babyliss Pro Stijltang'>Babyliss Pro Stijltang</a>,
+<a href='http://www.spijkerevents.nl/?g=126' title='Ghd Styler Iv'>Ghd Styler Iv</a>,
+<a href='http://www.spijkerevents.nl/?g=127' title='Babyliss Krulset'>Babyliss Krulset</a>,
+<a href='http://www.spijkerevents.nl/?g=127' title='Stijltang Ghd'>Stijltang Ghd</a></div>
+
+@*@Html.ActionLink("Products & Services", "terminals", "products-services")<br />*@

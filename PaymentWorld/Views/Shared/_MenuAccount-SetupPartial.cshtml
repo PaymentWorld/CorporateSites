@@ -1,0 +1,31 @@
+﻿@model Codebase.Website.Models.MenuViewModel
+
+@using Codebase.Website.Helpers
+@*<div class="menu2">
+<ul id="nav">
+    <li>@Html.ActionLink("PROCDUCT & SERVICES", "index", "products-services", null, new {  id = "products-services-text" })</li>
+    <li>@Html.ActionLink("ACCOUNT SETUP", "index", "account-setup", null, new { id = "account-setup-text" })</li>
+    <li>@Html.ActionLink("MERCHANT SUPPORT", "index", "merchant-support", null, new { @style = "background-color:#a2b5c8", id = "merchant-support-text" })</li>
+    <li>@Html.ActionLink("LEARNING & RESOURCES", "index", "learning-resources", null, new {  id = "learning-resources-text" })</li>
+    <li>@Html.ActionLink("CAREERS", "index", "careers", null, new { id = "careers-text" })</li>
+    <li>@Html.ActionLink("ABOUT US", "index", "contact-us", null, new {  id = "contact-us-text" })</li>   
+</ul>
+</div>*@
+<div class="menu-nav-box">             
+    <ul id="menu-nav">
+        <li id="home">@Html.MenuActionLink("index", "home")</li>      
+        <li id="product-service">@Html.MenuActionLink("index", "products-services")</li>                  
+        <li id="account-setup-active">@Html.MenuActionLink("index", "account-setup")</li>
+        <li id="partner">@Html.MenuActionLink("index", "partners")</li>
+        <li id="support-center">@Html.MenuActionLink("index", "support-center")</li>                        
+        <li id="careers">@Html.MenuActionLink("index", "careers")</li>
+        <li id="contact-us">@Html.MenuActionLink("index", "contact-us")</li>                                                
+    </ul>
+ </div> 
+
+@{    
+    if (Model.ShowSlider)
+    {
+        @Html.Partial(Model.MenuSliderPartialView, Model);
+    }    
+}
