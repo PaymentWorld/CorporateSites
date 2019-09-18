@@ -151,7 +151,9 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_cash.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_check.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_creditCardTerminal.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_data_breach_protection.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_ecommerce.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_fraud_chargeback_shield.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_giftCard.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_header.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_main_3.jpg" />

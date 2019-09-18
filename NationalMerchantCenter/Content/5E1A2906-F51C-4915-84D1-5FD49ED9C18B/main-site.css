@@ -1838,3 +1838,22 @@ a:hover,a:active {
      display:none;
      float:left;
 }
+
+.imageTwoax {
+    width: 90px;
+    height: 90px;
+    background-image: url("images/img_fraud_chargeback_shield.png");
+    border: 0px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.imageThirdax {
+    width: 90px;
+    height: 90px;
+    background-image: url("images/img_data_breach_protection.png");
+    background-size: 90px;
+    border: 0px;
+    background-repeat: no-repeat;
+    float: left;
+}
