@@ -152,6 +152,21 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_submit_rollover.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_twitter.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_twitter_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data breach landing page.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\databreach_head.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_cylance.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_endpoint.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_foot.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_claim.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_cylance.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_endpoint.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_lock.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_pci_portal_1.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_pci_portal_2.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_protect.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_register.PNG" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_lock.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_protect.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\icon.ico" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img-poynt.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img-pw_shield.png" />
@@ -299,6 +314,7 @@
     <Content Include="Scripts\custom\slides.min.jquery.js" />
     <Content Include="Controllers\vssver2.scc" />
     <Content Include="Models\vssver2.scc" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />
@@ -331,6 +347,7 @@
     <Compile Include="Controllers\account-setupController.cs" />
     <Compile Include="Controllers\careersController.cs" />
     <Compile Include="Controllers\contact-usController.cs" />
+    <Compile Include="Controllers\DataBreachController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\iso-agentController.cs" />
     <Compile Include="Controllers\learning-resourcesController.cs" />
@@ -469,6 +486,7 @@
     <Content Include="Views\why_us\index.cshtml" />
     <Content Include="Views\why_us\vssver2.scc" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\DataBreach\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
