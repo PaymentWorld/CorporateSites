@@ -369,6 +369,7 @@
     <Compile Include="Controllers\learning-resourcesController.cs" />
     <Compile Include="Controllers\menuController.cs" />
     <Compile Include="Controllers\partnersController.cs" />
+    <Compile Include="Controllers\PetController.cs" />
     <Compile Include="Controllers\products-servicesController.cs" />
     <Compile Include="Controllers\settlementController.cs" />
     <Compile Include="Controllers\support-centerController.cs" />
@@ -503,6 +504,7 @@
     <Content Include="Views\why_us\vssver2.scc" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\DataBreach\Index.cshtml" />
+    <Content Include="Views\DataBreach\Video.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -512,6 +514,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Pet\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

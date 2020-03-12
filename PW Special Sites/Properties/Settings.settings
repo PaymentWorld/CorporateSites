@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PW_Special_Sites.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AgentSettings" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;bbrodie@paymentworld.com,https://apps.paymentworld.com/?id=c74c1acf-6fe1-460a-b9d6-fe841ea59520,(855) 282-6510 ext 2205&lt;/string&gt;
+  &lt;string&gt;elena@paymentworld.com,https://apps.paymentworld.com/?id=c74c1acf-6fe1-460a-b9d6-fe841ea59520, (855) 282-6510 ext 2204&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

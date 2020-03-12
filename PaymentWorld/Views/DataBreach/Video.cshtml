@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Video</title>
+</head>
+<body>
+    <div style="width: 1327px; margin-left: auto; margin-right: auto; position:relative;">
+        <div id="head">
+            <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/databreach_head.jpg" />
+        </div>
+        <div style="position: absolute; top: 235px; left: 210px;">
+            <iframe width="900" height="500"
+                    src="@{ViewBag.Video}">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
