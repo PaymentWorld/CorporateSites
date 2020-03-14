@@ -17,9 +17,9 @@ namespace PW_Special_Sites.Controllers
                 {
                     if (item.Split(',')[0].ToLower() == q.ToLower())
                     {
-                        ViewBag.Email = item.Split(',')[0];
-                        ViewBag.AppsLink = item.Split(',')[1];
-                        ViewBag.Phone = item.Split(',')[2];
+                        ViewBag.Email = item.Split(',')[1];
+                        ViewBag.AppsLink = item.Split(',')[2];
+                        ViewBag.Phone = item.Split(',')[3];
                     }
                 } 
             }

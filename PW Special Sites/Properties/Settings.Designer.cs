@@ -27,8 +27,8 @@ namespace PW_Special_Sites.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
 <ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>bbrodie@paymentworld.com,https://apps.paymentworld.com/?id=c74c1acf-6fe1-460a-b9d6-fe841ea59520,(855) 282-6510 ext 2205</string>
-  <string>elena@paymentworld.com,https://apps.paymentworld.com/?id=c74c1acf-6fe1-460a-b9d6-fe841ea59520, (855) 282-6510 ext 2204</string>
+  <string>463501768,bbrodie@paymentworld.com,https://apps.paymentworld.com/?id=c74c1acf-6fe1-460a-b9d6-fe841ea59520,(855) 282-6510 ext 2205</string>
+  <string>319135322,elena@paymentworld.com,https://apps.paymentworld.com/?id=c74c1acf-6fe1-460a-b9d6-fe841ea59520, (855) 282-6510 ext 2204</string>
 </ArrayOfString>")]
         public global::System.Collections.Specialized.StringCollection AgentSettings {
             get {

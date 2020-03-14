@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Data Breach</title>
+    <title>PaymentWorld</title>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <style>
         .center {
@@ -59,16 +59,29 @@
             <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;position: relative; bottom: 210px;">
                 <h1>Contact Us</h1>
                 <span>@ViewBag.Phone</span><br />
-                <span>or email: @ViewBag.Email</span>
+                <span>or email: </span><br />
             </div>
             <a target="_blank" href="mailto:@ViewBag.Email">
                 <img class="controls" style="left: 898px;bottom: 2118px;" src="~/Content/Images/btnContactUs.PNG" />
             </a>
-            <a target="_blank" href="@ViewBag.AppsLink">
+            <a id="SecurityBundle" target="_blank" href="@ViewBag.AppsLink">
                 <img class="controls" style="left: 188px;bottom: 1381px;" src="~/Content/Images/btnApplyNow.PNG" />
             </a>
             <a target="_blank" href="@ViewBag.AppsLink">
                 <img class="controls" style="left: -110px;bottom: 400px;" src="~/Content/Images/btnApplyNow.PNG" />
+            </a>
+            <a id="ContactUsBottom" target="_blank" href="mailto:@ViewBag.Email">
+                <img class="controls" style="left: -290px;bottom: 205px;" src="~/Content/Images/btnMail.PNG" />
+            </a>
+
+            <a id="ContactUsTop" target="_self" href="#ContactUsTop">
+                <span class="controls" style="left: -323px;bottom: 2540px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Cash Discount</span>
+            </a>
+            <a target="_self" href="#SecurityBundle">
+                <span class="controls" style="left: -286px;bottom: 2540px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Security Bundle</span>
+            </a>
+            <a target="_self" href="#ContactUsBottom">
+                <span class="controls" style="left: 100px;bottom: 2574px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">ContactUs</span>
             </a>
 
             <a href="#" id="back-to-top" title="Back to top">

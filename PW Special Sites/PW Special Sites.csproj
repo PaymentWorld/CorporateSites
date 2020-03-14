@@ -95,6 +95,7 @@
     <Content Include="Content\Images\arrow_up.png" />
     <Content Include="Content\Images\btnApplyNow.PNG" />
     <Content Include="Content\Images\btnContactUs.PNG" />
+    <Content Include="Content\Images\btnMail.PNG" />
     <Content Include="Content\Images\PetBG.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -143,6 +144,7 @@
     <Content Include="Views\Pet\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Pet\RaedMe.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
