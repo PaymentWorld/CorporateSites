@@ -434,6 +434,7 @@
     <Content Include="PDF\WELLS_MPA_1804_MOTO_201512.pdf" />
     <Content Include="PDF\WELLS_MPA_1804_R_201512.pdf" />
     <Content Include="Views\DataBreach\Index.cshtml" />
+    <Content Include="Views\DataBreach\Video.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -64,7 +64,7 @@
             <a target="_blank" href="mailto:@ViewBag.Email">
                 <img class="controls" style="left: 898px;bottom: 2118px;" src="~/Content/Images/btnContactUs.PNG" />
             </a>
-            <a id="SecurityBundle" target="_blank" href="@ViewBag.AppsLink">
+            <a target="_blank" href="@ViewBag.AppsLink">
                 <img class="controls" style="left: 188px;bottom: 1381px;" src="~/Content/Images/btnApplyNow.PNG" />
             </a>
             <a target="_blank" href="@ViewBag.AppsLink">
@@ -73,16 +73,36 @@
             <a id="ContactUsBottom" target="_blank" href="mailto:@ViewBag.Email">
                 <img class="controls" style="left: -290px;bottom: 205px;" src="~/Content/Images/btnMail.PNG" />
             </a>
-
-            <a id="ContactUsTop" target="_self" href="#ContactUsTop">
-                <span class="controls" style="left: -323px;bottom: 2540px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Cash Discount</span>
-            </a>
-            <a target="_self" href="#SecurityBundle">
-                <span class="controls" style="left: -286px;bottom: 2540px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Security Bundle</span>
-            </a>
-            <a target="_self" href="#ContactUsBottom">
-                <span class="controls" style="left: 100px;bottom: 2574px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">ContactUs</span>
-            </a>
+            <table style="position: relative; bottom: 2610px;left: 750px; width: 600px;">
+                <tr>
+                    <td>
+                        <a target="_self" href="#CashDiscount">
+                            @*left: -430px;bottom: 2540px;*@
+                            <span class="controls" style=" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Cash Discount</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a target="_self" href="#SecurityBundle">
+                            @*left: -265px;bottom: 2540px;*@
+                            <span class="controls" style=" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Security Bundle</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a target="_self" href="#ContactUsBottom">
+                            @*left: 200px;bottom: 2574px;*@
+                            <span class="controls" style=" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue; font-size: 19pt;">Contact Us</span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            
+           
+            <div id="CashDiscount" class="controls" style="left: 0px;bottom:2050px;">
+                
+            </div>
+            <div id="SecurityBundle" class="controls" style="left: 0px;bottom:1080px;">
+                
+            </div>
 
             <a href="#" id="back-to-top" title="Back to top">
                 <img width="50px" src="~/Content/Images/arrow_up.png" />
