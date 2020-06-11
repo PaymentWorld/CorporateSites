@@ -153,6 +153,7 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_submit_rollover.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_twitter.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\btn_twitter_rollover.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\cyber_lock.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data breach landing page.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\databreach_head.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_cylance.jpg" />
@@ -172,6 +173,8 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_icon_register_1.PNG" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_lock.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_protect.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_stripe.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_stripe_white.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\icon.ico" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img-poynt.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img-pw_shield.png" />
@@ -218,6 +221,8 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-footer-2.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-footer.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\poynt-header.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\PW Logo.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\PW_logoTransparent.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowLeft.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowTop.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowTopLeftCorner.png" />
@@ -268,6 +273,11 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\default.css" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\loading.gif" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Styles\bootstrap.bundle.min.js" />
+    <Content Include="Content\Styles\bootstrap.min.css" />
+    <Content Include="Content\Styles\easing.js" />
+    <Content Include="Content\Styles\new-style.css" />
+    <Content Include="Content\Styles\new-style.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -321,6 +331,8 @@
     <Content Include="Controllers\vssver2.scc" />
     <Content Include="Models\vssver2.scc" />
     <Content Include="pdf\PW Cylance and Keystroke Activation Instructions.pdf" />
+    <Content Include="Content\Styles\jquery.min.js" />
+    <Content Include="Content\Styles\RadioSpace-zZ80.otf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />

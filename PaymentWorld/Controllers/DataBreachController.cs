@@ -12,6 +12,7 @@ namespace Codebase.Website.Pw.Controllers
         // GET: DataBreach
         public ActionResult Index()
         {
+            ViewBag.Video = ConfigurationManager.AppSettings["DataBreachVideo"];
             return View();
         }
         public ActionResult Video()
