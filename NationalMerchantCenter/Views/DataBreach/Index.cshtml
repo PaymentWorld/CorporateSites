@@ -1,125 +1,309 @@
 ﻿
 @{
-                /**/
-
-                Layout = null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Data Breach</title>
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <style>
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .head_menu_top {
-            position: relative;
-            float: left;
-        }
-
-        #back-to-top {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            z-index: 9999;
-            width: 32px;
-            height: 32px;
-            text-align: center;
-            line-height: 30px;
-            background: #f5f5f5;
-            color: #444;
-            cursor: pointer;
-            border: 0;
-            border-radius: 2px;
-            text-decoration: none;
-            transition: opacity 0.2s ease-out;
-            opacity: 0;
-        }
-
-            #back-to-top:hover {
-                background: #e9ebec;
-            }
-
-            #back-to-top.show {
-                opacity: 1;
-            }
-    </style>
+    <link href="/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/Styles/new-style.css" rel="stylesheet" />
 </head>
-<body>
-    <div>
-        <div style="width: 1327px; margin-left: auto; margin-right: auto; position:relative;">
-            <div id="head">
-                <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/databreach_head.jpg" />
-            </div>
-            <div id="protect">
-                <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_protect.jpg" />
-            </div>
-            <div id="cylance">
-                <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_cylance.jpg" />
-            </div>
-            <div id="endpoint">
-                <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_endpoint.jpg" />
-            </div>
-            <div id="lock">
-                <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_lock.jpg" />
-            </div>
-            <div id="footer">
-                <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_foot.jpg" />
-            </div>
-            <a href="#protect"><img class="head_menu_top" style="left: 139px;bottom: 3478px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_protect.PNG" /></a>
-            <a href="#cylance"><img class="head_menu_top" style="left: 274px;bottom: 3480px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_cylance.PNG" /></a>
-            <a href="#lock"><img class="head_menu_top" style="left: 448px;bottom: 3476px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_lock.PNG" /></a>
-            <a href="#endpoint"><img class="head_menu_top" style="left: 640px;bottom: 3486px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_endpoint.PNG" /></a>
-
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["RegisterForBreachProtectionBundle"]"><img class="head_menu_top" style="left: 414px;bottom: 2965px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_register.PNG" /></a>
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["FileAClaimWithRoyalGroupServices"]"><img class="head_menu_top" style="left: 156px;bottom: 2761px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_claim.PNG" /></a>
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["DownloadFromPCIPortal"]"><img class="head_menu_top" style="left: -41px;bottom: 1776px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_pci_portal_1.PNG" /></a>
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["DownloadFromPCIPortal"]"><img class="head_menu_top" style="right: 924px;bottom: 1521px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_pci_portal_2.PNG" /></a>
-
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["CylanceAndKystrokeActivationInstructions"]"><img class="head_menu_top" style="left: 131px;bottom: 2564px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_activation.PNG" /></a>
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["CylanceAndKystrokeActivationInstructions"]"><img class="head_menu_top" style="left: 374px; bottom: 1240px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_activation_1.PNG" /></a>
-
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["FileAClaimWithRoyalGroupServices"]"><img class="head_menu_top" style="left: 573px; bottom: 1240px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_claim_1.PNG" /></a>
-            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["RegisterForBreachProtectionBundle"]"><img class="head_menu_top" style="left: -414px; bottom: 1240px;" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/data_breach_icon_register_1.PNG" /></a>
-            <a target="_blank" class="head_menu_top" style="left: -90px;bottom: 765px;text-decoration: underline;color: white; font-family: Tahoma;font-size: x-large;cursor: pointer;" href="mailto:@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]">
-                <label>@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]</label>
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img class="img-fluid" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo.png" style="width: 100px;" />
             </a>
-            <a href="#" id="back-to-top" title="Back to top">
-                <img width="50px" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/arrow_up.png" />
-            </a>
+            @*<span class="content-to-hide" style="font-family: 'DigitalFont'; font-size: 15pt;">DATA BREACH BUNDLE</span>*@
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#video">Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#protect">Protect</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#cylance">Cylance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#endpoint">Endpoint</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <header class="masthead">
+        <div class="content h-100">
+            <div class="row h-100 m-0" style="        background-image: linear-gradient(135deg,#005898, #014a7f, #001125, #00000d);">
+                <div class="col-lg-6 pl-0 pr-0 text-left">
+                    <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/cyber_lock_transparent.png" style="transform: scaleX(-1); width: 120%;" />
+                </div>
+                <div class="col-lg-6 pl-0 text-right" style="font-family: 'Open Sans';font-weight: bold; padding-top: 10%; padding-right: 10%; font-size: 72pt;">
+                    DATA BREACH BUNDLE
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="video text-center" id="video">
+        <div class="content">
+            <div class="row m-0">
+                <div class="col-md-12 pl-0 pr-0">
+                    <div class="embed-responsive embed-responsive-21by9">
+                        <iframe class="embed-responsive-item" src="@ViewBag.Video" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="protect text-center pt-0" id="protect">
+        <div class="content">
+            <div class="row m-0">
+                <div class="col-md-12 pl-0 pr-0" style="background-image: linear-gradient(#00000d, #00487c);">
+                    <div class="row m-0 pt-5 pb-lg-5" style="color: white;">
+                        <div class="col-md-3 pl-5 pr-5">
+                            <i class="fas fa-umbrella fa-9x"></i>
+                            <br />
+                            <br />
+                            <span><strong>Breach Protection</strong></span>
+                            <br />
+                            <span>Provides merchants with legal, consulting, loss protection, & incident response services</span>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+                            <i class="fas fa-shield-alt fa-9x"></i>
+                            <br />
+                            <br />
+                            <span><strong>CylancePROTECT™</strong></span>
+                            <br />
+                            <span>Machine learning & artificial intelligence engine that distinguishes between malicious malware & legitimate programs</span>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+                            <i class="fas fa-unlock-alt fa-9x"></i>
+                            <br />
+                            <br />
+                            <span><strong>Endpoint Lock</strong></span>
+                            <br />
+                            <span>Keystroke encryption layer that is installed on a merchant's peripheral devices to protect information at the point of data entry</span>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+                            <i class="fas fa-search fa-9x"></i>
+                            <br />
+                            <br />
+                            <span><strong>Endpoint Scanning</strong></span>
+                            <br />
+                            <span>Identifies unencrypted card holder data (PII), misconfigured vulnerable devices, and network vulnerabilities that need patching</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 pl-0 pr-0">
+                    <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5">
+                        <div class="col-md-9 text-left">
+                            <h1 class="pull-left">BREACH PROTECTION</h1>
+                            <br />
+                            <span>The Merchant Liability Response provides legal, consulting, loss protection, & incident response services from one of the nation's most respected  consulting and cyber focused law firms.</span>
+                            <br />
+                            <ul>
+                                <li>Up to $100,00.00 for a single  merchant and $500,00.00 for merchant chain coverage</li>
+                                <li>Full coverage  for GDPR, HIPAA, CA Consumer Privacy Act, GLBA, & other State/ FED PII violations</li>
+                                <li>POS replacement equipment</li>
+                                <li>Breach management and notification from a cyber privacy law firm</li>
+                                <li>Post breach PCI recertification services with PCI Security Standards Council</li>
+                                <li>Loss mitigation audits (i.e. EMV equipment upgrade)</li>
+                                <li>PCI compliance is not required for this protection</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["RegisterForBreachProtectionBundle"]" style="color: black;">
+                                <i class="fas fa-edit fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>Register for Breach Protection Bundle</strong></span>
+                            <br />
+                            <br />
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["FileAClaimWithRoyalGroupServices"]" style="color: black;">
+                                <i class="fas fa-hand-holding-usd fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>File a Claim  with Royal Group Services</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cylance text-center pt-0" id="cylance">
+        <div class="content">
+            <div class="row m-0">
+                <div class="col-md-12 pl-0 pr-0" style="background-image: linear-gradient(#00000d, #00487c);">
+                    <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5" style="color: white;">
+                        <div class="col-md-9 text-left">
+                            <h1 class="pull-left">CylancePROTECT™</h1>
+                            <br />
+                            <span>CylancePROTECT™ is a machine-learning and artificial intelligence enabled malware detection engine that stops a threat before it has embedded itself in the network.</span>
+                            <br />
+                            <ul>
+                                <li>Uses machine-learning to identify and block malware</li>
+                                <li>Extremely lightweight with no performance impact</li>
+                                <li>Uses an AI model that prevents against zero-day attacks</li>
+                                <li>Administrate and approve devices accessing your data</li>
+                                <li>Used by US Secret Service, Office of Personal Management, and other US Gov Agencies</li>
+                                <li>File Integrity Monitoring (FIM) that identifies changes to files and blocks malicious activity</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["CylanceAndKystrokeActivationInstructions"]" style="color: white;">
+                                <i class="fas fa-cloud-download-alt fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>Cylance & Keystroke Activation Instructions</strong></span>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="endpoint text-center pt-0" id="endpoint">
+        <div class="content">
+            <div class="row m-0">
+                <div class="col-md-12 pl-0 pr-0">
+                    <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5">
+                        <div class="col-md-9 pl-5 pr-5 text-left">
+                            <h1 class="pull-left">Endpoint Scanning</h1>
+                            <br />
+                            <span>Endpoint scanning assesses a merchant's internal, mobile, and processing network.</span>
+                            <br />
+                            <ul>
+                                <li>Identifying unencrypted cardholder data (PII)</li>
+                                <li>Identifies unencrypted social security number (SSN)</li>
+                                <li>Identifies misconfigured and/or vulnerable devices</li>
+                                <li>Identifies network vulnerabilities and provides remediation steps for patching</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["RegisterForBreachProtectionBundle"]" style="color: black;">
+                                <i class="fas fa-cloud-download-alt fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>Download from PCI Portal</strong></span>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 pl-0 pr-0" style="background-image: linear-gradient(#00000d, #00487c);">
+                    <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5" style="color: white;">
+                        <div class="col-md-9 pl-5 pr-5 text-left">
+                            <h1 class="pull-left">EndpointLock™</h1>
+                            <br />
+                            <span>EndpointLock™ is a keystroke encryption layer that is installed on your peripheral devices to protect your information at the point of data entry.</span>
+                            <br />
+                            <ul>
+                                <li>Installed on mobile and/or desktop devices</li>
+                                <li>Identifies threats and attacks at an early stage</li>
+                                <li>Foundational breach protection for the merchants</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["RegisterForBreachProtectionBundle"]" style="color: white;">
+                                <i class="fas fa-cloud-download-alt fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>Download from PCI Portal</strong></span>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact text-center pt-0" id="contact">
+        <div class="content">
+            <div class="row m-0">
+                <div class="col-md-12 pl-0 pr-0">
+                    <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5">
+                        <div class="col-md-4 pl-5 pr-5">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["RegisterForBreachProtectionBundle"]" style="color: black;">
+                                <i class="fas fa-edit fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>Register for Breach Protection Bundle</strong></span>
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col-md-4 pl-5 pr-5">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["CylanceAndKystrokeActivationInstructions"]" style="color: black;">
+                                <i class="fas fa-cloud-download-alt fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>Cylance & Endpoint Activation Instructions</strong></span>
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col-md-4 pl-5 pr-5">
+                            <a target="_blank" href="@System.Configuration.ConfigurationManager.AppSettings["FileAClaimWithRoyalGroupServices"]" style="color: black;">
+                                <i class="fas fa-hand-holding-usd fa-5x"></i>
+                            </a>
+                            <br />
+                            <br />
+                            <span><strong>File a Claim  with Royal Group Services</strong></span>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 pl-0 pr-0">
+                    <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5">
+                        <div class="col-md-3 pl-5 pr-5">
 
-    </div>
+                        </div>
+                        <div class="col-md-6 p-5 text-center" style="background-image: linear-gradient(#00000d, #00487c); color: white; border-radius: 10px;">
+                            <h1>CONTACT US FOR MORE INFO</h1>
+                            <span>
+                                Call now: @System.Configuration.ConfigurationManager.AppSettings["phoneSupport"] or email:
+                                <a target="_blank" href="mailto:@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]">@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]</a>
+                            </span>
+                        </div>
+                        <div class="col-md-3 pl-5 pr-5">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 pl-0 pr-0">
+                    <p>PAYMENTWORLD, LLC IS A REGISTERED ISO/MSP OF THE FOLLOWING BANKS:</p>
+                    <p>MERRICK BANK, SOUTH JORDAN, UT</p>
+                    <p>EQUIRE BANK, GARDEN CITY, NY</p>
+                    <p>© @DateTime.Now.Year PaymentWorld, LLC. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Content/Styles/jquery.min.js"></script>
+    <script src="/Content/Styles/bootstrap.bundle.min.js"></script>
+    <script src="/Content/Styles/easing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+    <script src="/Content/Styles/new-style.js"></script>
 </body>
 </html>
-
-<script>
-    if ($('#back-to-top').length) {
-    var scrollTrigger = 100, // px
-        backToTop = function () {
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop > scrollTrigger) {
-                $('#back-to-top').addClass('show');
-            } else {
-                $('#back-to-top').removeClass('show');
-            }
-        };
-    backToTop();
-    $(window).on('scroll', function () {
-        backToTop();
-    });
-    $('#back-to-top').on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
-    });
-}
-</script>

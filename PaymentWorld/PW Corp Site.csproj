@@ -333,6 +333,7 @@
     <Content Include="pdf\PW Cylance and Keystroke Activation Instructions.pdf" />
     <Content Include="Content\Styles\jquery.min.js" />
     <Content Include="Content\Styles\RadioSpace-zZ80.otf" />
+    <Content Include="Content\Styles\OpenSans-Bold.ttf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
