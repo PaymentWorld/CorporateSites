@@ -195,6 +195,7 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_tabTop.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_wireless.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\NMC_logo.png" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\NMC_logo2.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\PW_logoTransparent.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowLeft.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\text_pageShadowTop.png" />
@@ -277,6 +278,7 @@
     <Content Include="Scripts\custom\slides.min.jquery.js" />
     <Content Include="PDF\NMC Cylance and Keystroke Activation Instructions.pdf" />
     <Content Include="Content\Styles\RadioSpace-zZ80.otf" />
+    <Content Include="Content\Styles\OpenSans-Bold.ttf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />

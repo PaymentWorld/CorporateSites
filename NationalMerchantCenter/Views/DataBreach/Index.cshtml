@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <img class="img-fluid" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo.png" style="width: 100px;" />
+                <img id="Logo" class="img-fluid" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo2.png" style="width: 200px;" />
             </a>
             @*<span class="content-to-hide" style="font-family: 'DigitalFont'; font-size: 15pt;">DATA BREACH BUNDLE</span>*@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
                 <div class="col-lg-6 pl-0 pr-0 text-left">
                     <img class="center" src="~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/cyber_lock_transparent.png" style="transform: scaleX(-1); width: 120%;" />
                 </div>
-                <div class="col-lg-6 pl-0 text-right" style="font-family: 'Open Sans';font-weight: bold; padding-top: 10%; padding-right: 10%; font-size: 72pt;">
+                <div class="col-lg-6 pl-0 text-right" style="font-family: 'Open Sans';font-weight: bold; padding-top: 10%; padding-right: 10%; font-size: 45pt;">
                     DATA BREACH BUNDLE
                 </div>
             </div>
@@ -60,7 +60,7 @@
     <section class="video text-center" id="video">
         <div class="content">
             <div class="row m-0">
-                <div class="col-md-12 pl-0 pr-0">
+                <div class="col-md-12 pl-5 pr-5 pb-5">
                     <div class="embed-responsive embed-responsive-21by9">
                         <iframe class="embed-responsive-item" src="@ViewBag.Video" allowfullscreen>
                         </iframe>
@@ -73,9 +73,11 @@
         <div class="content">
             <div class="row m-0">
                 <div class="col-md-12 pl-0 pr-0" style="background-image: linear-gradient(#00000d, #00487c);">
-                    <div class="row m-0 pt-5 pb-lg-5" style="color: white;">
+                    <div class="row m-0 pt-5 pb-lg-5" style="color: white !important;">
                         <div class="col-md-3 pl-5 pr-5">
-                            <i class="fas fa-umbrella fa-9x"></i>
+                            <a class="js-scroll-trigger" href="#protect" style="color: white !important;">
+                                <i class="fas fa-umbrella fa-9x"></i>
+                            </a>
                             <br />
                             <br />
                             <span><strong>Breach Protection</strong></span>
@@ -83,7 +85,9 @@
                             <span>Provides merchants with legal, consulting, loss protection, & incident response services</span>
                         </div>
                         <div class="col-md-3 pl-5 pr-5">
-                            <i class="fas fa-shield-alt fa-9x"></i>
+                            <a class="js-scroll-trigger" href="#cylance" style="color: white !important;">
+                                <i class="fas fa-shield-alt fa-9x"></i>
+                            </a>
                             <br />
                             <br />
                             <span><strong>CylancePROTECT™</strong></span>
@@ -91,7 +95,9 @@
                             <span>Machine learning & artificial intelligence engine that distinguishes between malicious malware & legitimate programs</span>
                         </div>
                         <div class="col-md-3 pl-5 pr-5">
-                            <i class="fas fa-unlock-alt fa-9x"></i>
+                            <a class="js-scroll-trigger" href="#endpoint" style="color: white !important;">
+                                <i class="fas fa-unlock-alt fa-9x"></i>
+                            </a>
                             <br />
                             <br />
                             <span><strong>Endpoint Lock</strong></span>
@@ -99,7 +105,9 @@
                             <span>Keystroke encryption layer that is installed on a merchant's peripheral devices to protect information at the point of data entry</span>
                         </div>
                         <div class="col-md-3 pl-5 pr-5">
-                            <i class="fas fa-search fa-9x"></i>
+                            <a class="js-scroll-trigger" href="#endpoint" style="color: white !important;">
+                                <i class="fas fa-search fa-9x"></i>
+                            </a>
                             <br />
                             <br />
                             <span><strong>Endpoint Scanning</strong></span>
@@ -292,10 +300,8 @@
                     </div>
                 </div>
                 <div class="col-md-12 pl-0 pr-0">
-                    <p>PAYMENTWORLD, LLC IS A REGISTERED ISO/MSP OF THE FOLLOWING BANKS:</p>
-                    <p>MERRICK BANK, SOUTH JORDAN, UT</p>
-                    <p>EQUIRE BANK, GARDEN CITY, NY</p>
-                    <p>© @DateTime.Now.Year PaymentWorld, LLC. ALL RIGHTS RESERVED</p>
+                    <p>NATIONAL MERCHANT CENTER INC, IS A REGISTERED ISO/MSP OF WELL FARGO BANK</p>
+                    <p>© @DateTime.Now.Year National Merchant Center, LLC. ALL RIGHTS RESERVED</p>
                 </div>
             </div>
         </div>
@@ -307,3 +313,17 @@
     <script src="/Content/Styles/new-style.js"></script>
 </body>
 </html>
+<script>
+    var onScrollHandler = function () {
+        var newImageUrl = document.getElementById('Logo').src;
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop < 700) {
+            newImageUrl = "Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo2.png"
+        } else {
+            newImageUrl = "Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo.png"
+        }
+        document.getElementById('Logo').src = newImageUrl;
+    };
+    
+    document.addEventListener("scroll", onScrollHandler);
+</script>
