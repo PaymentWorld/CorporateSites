@@ -168,6 +168,7 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_protect.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_stripe.jpg" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\data_breach_stripe_white.jpg" />
+    <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\icon.ico" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_arrowLeft.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_arrowRight.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\images\img_atm.jpg" />
@@ -273,6 +274,8 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Docs\Systems Analyst_201406.htm" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\concentCookies\purecookie.css" />
+    <Content Include="Scripts\concentCookies\purecookie.js" />
     <Content Include="Scripts\custom\jquery.global.js" />
     <Content Include="Scripts\custom\jquery.nivo.slider.pack.js" />
     <Content Include="Scripts\custom\slides.min.jquery.js" />
@@ -380,6 +383,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\LinkHelper.cs" />
+    <Compile Include="Helpers\SmtpClient.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AccountSetupViewModel.cs" />
     <Compile Include="Models\AgentLoginViewModel.cs" />

@@ -325,6 +325,8 @@
     <Content Include="Global.asax" />
     <Content Include="pw_logo.png" />
     <Content Include="README.jQuery.vsdoc.txt" />
+    <Content Include="Scripts\concentCookies\purecookie.css" />
+    <Content Include="Scripts\concentCookies\purecookie.js" />
     <Content Include="Scripts\custom\jquery.blockUI.js" />
     <Content Include="Scripts\custom\jquery.global.js" />
     <Content Include="Scripts\custom\jquery.nivo.slider.pack.js" />
@@ -390,6 +392,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\LinkHelper.cs" />
+    <Compile Include="Helpers\SmtpClient.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AccountSetupViewModel.cs" />
     <Compile Include="Models\AgentLoginViewModel.cs" />

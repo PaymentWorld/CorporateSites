@@ -15,12 +15,12 @@ body {
 }
 
 a {
-    color: #fdcc52;
+    color: #007bff;
     transition: all .35s;
 }
 
     a:hover, a:focus {
-        color: #fcbd20;
+        color: #007bff;
     }
 
 hr {
@@ -69,14 +69,14 @@ section {
 }
 
     #mainNav .navbar-brand {
-        color: #fdcc52;
+        color: #007bff;
         font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
         font-weight: 500;
         letter-spacing: 1px;
     }
 
         #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-            color: #fcbd20;
+            color: #007bff;
         }
 
     #mainNav .navbar-toggler {
@@ -93,7 +93,7 @@ section {
     }
 
         #mainNav .navbar-nav > li > a.active {
-            color: #fdcc52 !important;
+            color: #007bff !important;
             background-color: transparent;
         }
 
@@ -108,7 +108,7 @@ section {
 
             #mainNav .navbar-nav > li > a:hover,
             #mainNav .navbar-nav > li > a:focus:hover {
-                color: #fdcc52;
+                color: #007bff;
             }
 
 @media (min-width: 992px) {
@@ -147,7 +147,7 @@ section {
             }
 
                 #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-                    color: #fdcc52;
+                    color: #007bff;
                 }
 
             #mainNav.navbar-shrink .navbar-nav > li > a,
@@ -157,7 +157,7 @@ section {
 
                 #mainNav.navbar-shrink .navbar-nav > li > a:hover,
                 #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-                    color: #fdcc52;
+                    color: #007bff;
                 }
 }
 
@@ -409,12 +409,12 @@ footer {
             }
 
 .bg-primary {
-    /*background: #fdcc52;
-    background: linear-gradient(#fdcc52, #fdc539);*/
+    /*background: #007bff;
+    background: linear-gradient(#007bff, #fdc539);*/
 }
 
 .text-primary {
-    color: #fdcc52;
+    color: #007bff;
 }
 
 .no-gutter > [class*='col-'] {
@@ -430,8 +430,8 @@ footer {
 
     .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
         color: white;
-        border-color: #fdcc52;
-        background-color: #fdcc52;
+        border-color: #007bff;
+        background-color: #007bff;
     }
 
 .btn {

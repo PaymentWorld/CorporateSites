@@ -11,6 +11,7 @@
     <title>Data Breach</title>
     <link href="/Content/Styles/bootstrap.min.css" rel="stylesheet" />
     <link href="/Content/Styles/new-style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="@Url.Content("~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/icon.ico")" />
 </head>
 <body id="page-top">
     <!-- Navigation -->
@@ -25,7 +26,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" style="font-weight: 700;">
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#video">Learn</a>
                     </li>
@@ -60,8 +61,8 @@
     <section class="video text-center" id="video">
         <div class="content">
             <div class="row m-0">
-                <div class="col-md-12 pl-5 pr-5 pb-5">
-                    <div class="embed-responsive embed-responsive-21by9">
+                <div class="col-md-12 pl-5 pr-5 pb-lg-5">
+                    <div class="embed-responsive embed-responsive-16by9 col-md-6 offset-3">
                         <iframe class="embed-responsive-item" src="@ViewBag.Video" allowfullscreen>
                         </iframe>
                     </div>
@@ -69,7 +70,7 @@
             </div>
         </div>
     </section>
-    <section class="protect text-center pt-0" id="protect">
+    <section class="protect text-center pt-0">
         <div class="content">
             <div class="row m-0">
                 <div class="col-md-12 pl-0 pr-0" style="background-image: linear-gradient(#00000d, #00487c);">
@@ -116,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 pl-0 pr-0">
+                <div class="col-md-12 pl-0 pr-0" id="protect">
                     <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5">
                         <div class="col-md-9 text-left">
                             <h1 class="pull-left">BREACH PROTECTION</h1>
@@ -245,7 +246,7 @@
             </div>
         </div>
     </section>
-    <section class="contact text-center pt-0" id="contact">
+    <section class="contact text-center pt-0" id="">
         <div class="content">
             <div class="row m-0">
                 <div class="col-md-12 pl-0 pr-0">
@@ -282,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 pl-0 pr-0">
+                <div class="col-md-12 pl-0 pr-0" id="contact">
                     <div class="row m-0 pt-5 pb-5 pl-lg-5 pr-lg-5">
                         <div class="col-md-3 pl-5 pr-5">
 
@@ -290,9 +291,31 @@
                         <div class="col-md-6 p-5 text-center" style="background-image: linear-gradient(#00000d, #00487c); color: white; border-radius: 10px;">
                             <h1>CONTACT US FOR MORE INFO</h1>
                             <span>
-                                Call now: @System.Configuration.ConfigurationManager.AppSettings["phoneSupport"] or email:
-                                <a target="_blank" href="mailto:@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]">@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]</a>
+                                Call now: @System.Configuration.ConfigurationManager.AppSettings["phoneSupport"] 
+                                @*or email:
+                                <a target="_blank" href="mailto:@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]">@System.Configuration.ConfigurationManager.AppSettings["emailSupport"]</a>*@
                             </span>
+                            <hr />
+                            <div class="row">
+                                <label>Name</label>
+                                <div class="col-md-12"><input id="contactName" class="form-control" /></div>
+                            </div>
+                            <div class="row">
+                                <label>Email</label>
+                                <div class="col-md-12"><input id="contactEmail" class="form-control" /></div>
+                            </div>
+                            <div class="row">
+                                <label>Subject</label>
+                                <div class="col-md-12"><input id="contactSubject" class="form-control" /></div>
+                            </div>
+                            <div class="row">
+                                <label>Message</label>
+                                <div class="col-md-12"><textarea id="contactMessage" class="form-control"></textarea></div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary float-right" onclick="sendContact();">Submit</button>
+                                <button class="btn btn-warning float-right" onclick="clearContact()">Cancel</button>
+                            </div>
                         </div>
                         <div class="col-md-3 pl-5 pr-5">
 
@@ -302,6 +325,8 @@
                 <div class="col-md-12 pl-0 pr-0">
                     <p>NATIONAL MERCHANT CENTER INC, IS A REGISTERED ISO/MSP OF WELL FARGO BANK</p>
                     <p>© @DateTime.Now.Year National Merchant Center, LLC. ALL RIGHTS RESERVED</p>
+                    <br />
+                    <br />
                 </div>
             </div>
         </div>
@@ -317,13 +342,57 @@
     var onScrollHandler = function () {
         var newImageUrl = document.getElementById('Logo').src;
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop < 700) {
-            newImageUrl = "Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo2.png"
+        if (scrollTop < 120) {
+            newImageUrl = "/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo2.png"
         } else {
-            newImageUrl = "Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo.png"
+            newImageUrl = "/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/NMC_logo.png"
         }
         document.getElementById('Logo').src = newImageUrl;
     };
     
     document.addEventListener("scroll", onScrollHandler);
+
+    function clearContact() {
+        $('#contactName').val('');
+        $('#contactEmail').val('');
+        $('#contactSubject').val('');
+        $('#contactMessage').val('');
+    }
+
+    function sendContact() {
+        var payload = {
+            name: $('#contactName').val(),
+            email: $('#contactEmail').val(),
+            subject: $('#contactSubject').val(),
+            message: $('#contactMessage').val()
+        };
+
+        if (!payload.name) {
+            alert('Please enter Name!');
+        }
+        if (!payload.email) {
+            alert('Please enter Email!');
+        }
+        if (!payload.subject) {
+            alert('Please enter Subject!');
+        }
+        if (!payload.message) {
+            alert('Please enter Message!');
+        }
+
+        var request = $.ajax({
+            url: "/DataBreach/sendMessage",
+            method: "POST",
+            data: payload
+        });
+
+        request.done(function (msg) {
+            alert('Message Sent!');
+            clearContact();
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+    }
 </script>
