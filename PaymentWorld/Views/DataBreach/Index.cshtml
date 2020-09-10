@@ -347,6 +347,8 @@
     }
 
     function sendContact() {
+        $('input,textarea,button').attr('disabled', 'disabled');
+
         var payload = {
             name: $('#contactName').val(),
             email: $('#contactEmail').val(),
@@ -354,17 +356,25 @@
             message: $('#contactMessage').val()
         };
 
+        var message = '';
+
         if (!payload.name) {
-            alert('Please enter Name!');
+            message += 'Please enter Name!\n';
         }
         if (!payload.email) {
-            alert('Please enter Email!');
+            message += 'Please enter Email!\n';
         }
         if (!payload.subject) {
-            alert('Please enter Subject!');
+            message += 'Please enter Subject!\n';
         }
         if (!payload.message) {
-            alert('Please enter Message!');
+            message += 'Please enter Message!\n';
+        }
+
+        if (message !== '') {
+            alert(message);
+            $('input,textarea,button').removeAttr('disabled', 'disabled');
+            return false;
         }
 
         var request = $.ajax({
@@ -376,10 +386,12 @@
         request.done(function (msg) {
             alert('Message Sent!');
             clearContact();
+            $('input,textarea,button').removeAttr('disabled', 'disabled');
         });
 
         request.fail(function (jqXHR, textStatus) {
             alert("Request failed: " + textStatus);
+            $('input,textarea,button').removeAttr('disabled', 'disabled');
         });
     }
 </script>

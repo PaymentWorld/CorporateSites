@@ -93,11 +93,17 @@ namespace Codebase.Website.Pw.Helpers
             // parse recepient address(es) here
             SmtpClient.AddAddress(message, AddressTypeEnums.To, to);
 
-            if (!string.IsNullOrEmpty(cc))
-                SmtpClient.AddAddress(message, AddressTypeEnums.Cc, cc);
+            for (int i = 0; i < cc.Split(',').Length; i++)
+            {
+                if (!string.IsNullOrEmpty(cc.Split(',')[i]))
+                    SmtpClient.AddAddress(message, AddressTypeEnums.Cc, cc.Split(',')[i]);
+            }
 
-            if (!string.IsNullOrEmpty(bcc))
-                SmtpClient.AddAddress(message, AddressTypeEnums.Bcc, bcc);
+            for (int i = 0; i < bcc.Split(',').Length; i++)
+            {
+                if (!string.IsNullOrEmpty(bcc.Split(',')[i]))
+                    SmtpClient.AddAddress(message, AddressTypeEnums.Bcc, bcc.Split(',')[i]);
+            }
 
             // set additional message properties
             message.IsBodyHtml = true;
@@ -134,11 +140,17 @@ namespace Codebase.Website.Pw.Helpers
             // parse recepient address(es) here
             SmtpClient.AddAddress(message, AddressTypeEnums.To, to);
 
-            if (!string.IsNullOrEmpty(cc))
-                SmtpClient.AddAddress(message, AddressTypeEnums.Cc, cc);
+            for (int i = 0; i < cc.Split(',').Length; i++)
+            {
+                if (!string.IsNullOrEmpty(cc.Split(',')[i]))
+                    SmtpClient.AddAddress(message, AddressTypeEnums.Cc, cc.Split(',')[i]);
+            }
 
-            if (!string.IsNullOrEmpty(bcc))
-                SmtpClient.AddAddress(message, AddressTypeEnums.Bcc, bcc);
+            for (int i = 0; i < bcc.Split(',').Length; i++)
+            {
+                if (!string.IsNullOrEmpty(bcc.Split(',')[i]))
+                    SmtpClient.AddAddress(message, AddressTypeEnums.Bcc, bcc.Split(',')[i]);
+            }
 
             if (!string.IsNullOrEmpty(attachments))
                 SmtpClient.AddAttachments(message, attachments);

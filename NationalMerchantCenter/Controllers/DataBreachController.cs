@@ -33,27 +33,24 @@ namespace Codebase.Website.Nmc.Controllers
             var z_EmailPriority = Convert.ToInt32(WebConfigurationManager.AppSettings["SmtpPriority"]);
             var z_SmtpSsl = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["SmtpSSL"]);
             var z_SmtpAdminEmail = System.Configuration.ConfigurationManager.AppSettings["SmtpAdminEmail"];
+            var z_SmtpCc = System.Configuration.ConfigurationManager.AppSettings["SmtpCc"];
+            var z_SmtpBcc = System.Configuration.ConfigurationManager.AppSettings["SmtpBcc"];
 
-            string fromEmail = string.Empty;
-            string fromName = string.Empty;
-            string cc = string.Empty;
-            string bcc = string.Empty;
-            string subject = string.Empty;
-            string body = string.Empty;
-            string recipient = string.Empty;
 
-            fromEmail = model.Email;
-            fromName = model.Name;
-            recipient = z_SmtpAdminEmail;
-            subject = model.Subject;
-            body = @"From: " + model.Email;
+            string fromEmail = model.Email;
+            string fromName = model.Name;
+            string recipient = z_SmtpAdminEmail;
+            string cc = z_SmtpCc;
+            string bcc = z_SmtpBcc;
+            string subject = model.Subject;
+            string body = @"From: " + model.Email;
             body += @"</br>";
             body += @"Name: " + model.Name;
             body += @"</br>";
             body += @"Subject: " + model.Subject;
             body += @"</br>";
             body += @"Message: " + model.Message;
-
+            
             SmtpClient.SendEmail(z_SmtpServer,
                                 z_SmtpPort,
                                 z_SmtpUsername,
