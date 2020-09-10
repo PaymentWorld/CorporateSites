@@ -9,7 +9,7 @@
     <title>PaymentWorld</title>
 
     <meta name="keywords" content="accept credit card, accept credit card payments, accept debit card, accept internet payments, accept payments anywhere, accept payments via telephone, ach, atm, atm retail program, atm solution, attract new customers, cash advance, certify for MasterCard regulations, certify for VISA regulations, check 21, compare credit card processing fees, credit card, credit card payment, credit card processing, credit card processor, debit card, debit card payment, easy approval process, e-commerce, e-commerce support, expand your business, gift cards, increase profit potential, lower your processing fees, loyalty cards, manage sales and inventory, merchant, merchant account, merchant account services, merchant provider, merchant services, merchant support, mobile payment, online reporting tools, pci compliance, pos retail system, processing solution, quickbooks solutions, recurring billing capabilities, reduce fraud, small business, help small business, virtual terminal, wireless terminal" />
-
+    @*<meta http-equiv="Refresh" content="0; url='https://www.paymentworld.com/'" />*@
     <link rel="shortcut icon" href="@Url.Content("~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/images/icon.ico")" />
     <link href="@Url.Content("~/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/main-site.css")" rel="stylesheet" type="text/css" />
     <link href="/Content/5E1A2906-F51C-4915-84D1-5FD49ED9C18B/font/TodaySansHEFOP-light/stylesheet.css" rel="stylesheet" />
@@ -160,6 +160,11 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
+        $(function () {
+            if (document.location.protocol === 'http:') {
+                document.location.href = 'https://www.paymentworld.com/';
+            }
+        });
     </script>        
 </body>
 </html>
