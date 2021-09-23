@@ -274,6 +274,8 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\bullets.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\default.css" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\loading.gif" />
+    <Content Include="Content\Files\Policy.html" />
+    <Content Include="Content\Files\Terms.html" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Styles\bootstrap.bundle.min.js" />
     <Content Include="Content\Styles\bootstrap.min.css" />
@@ -336,6 +338,7 @@
     <Content Include="Content\Styles\jquery.min.js" />
     <Content Include="Content\Styles\RadioSpace-zZ80.otf" />
     <Content Include="Content\Styles\OpenSans-Bold.ttf" />
+    <Content Include="Content\Files\Data Request Form.pdf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />

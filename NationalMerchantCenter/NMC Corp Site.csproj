@@ -237,6 +237,8 @@
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\bullets.png" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\default.css" />
     <Content Include="Content\5E1A2906-F51C-4915-84D1-5FD49ED9C18B\themes\default\loading.gif" />
+    <Content Include="Content\Files\Policy.html" />
+    <Content Include="Content\Files\Terms.html" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Styles\bootstrap.bundle.min.js" />
     <Content Include="Content\Styles\bootstrap.min.css" />
@@ -282,7 +284,12 @@
     <Content Include="PDF\NMC Cylance and Keystroke Activation Instructions.pdf" />
     <Content Include="Content\Styles\RadioSpace-zZ80.otf" />
     <Content Include="Content\Styles\OpenSans-Bold.ttf" />
+    <Content Include="Content\Files\Data Request Form.pdf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />
@@ -390,6 +397,11 @@
     <Compile Include="Models\MenuViewModel.cs" />
     <Compile Include="Models\ProductsServicesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -457,6 +469,7 @@
     <Content Include="PDF\WELLS_MPA_1804_R_201512.pdf" />
     <Content Include="Views\DataBreach\Index.cshtml" />
     <Content Include="Views\DataBreach\Video.cshtml" />
+    <Content Include="Views\home\opt_out_policy.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

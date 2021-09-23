@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "OPT-OUT";
+}
+<form method="post" action="submitOptOut">
+    <div class="terms-policy-content">
+        <!--  Middle box -->
+        <div class="middleboxmain">
+            <div class="middleboxShadowTop"></div>
+            <div class="middleboxCorner"></div>
+        </div>
+        <div class="term-policy-box">
+            <div class="middleboxShadowLeft"></div>
+            @*<div>@Html.ActionLink("TERMS OF USE", "terms-of-use", "home", null, new { @class = "term-b" })</div>
+                <div>@Html.ActionLink("PRIVACY POLICY", "privacy-policy", "home", null, new { @class = "policy-b" })</div>*@
+        </div>
+        <div class="term-policy-content-box">
+            <div class="middleboxShadowLeft2"></div>
+            <div class="middlebox">
+                <span class="middleboxTitle" style="color:black !important;">
+                    <br />
+                    National Merchant Center collects personal information and other information (collectively “information”) about you when you visit our website and submit your information. Depending on your place of residence, you may be able to request:
+                </span><br />
+                <br />
+                <ul>
+                    <li><strong>Disclosure</strong> about what information we collect and share.</li>
+                    <li><strong>Access</strong> to a copy of information that we have collected about you.</li>
+                    <li><strong>Opt out</strong> of certain information-sharing practices.</li>
+                    <li><strong>Deletion</strong> of information that we have collected from or about you. We may retain information as required or permitted by law. <strong>Deletion of your information may include online account and portal access, this may impact other services and experiences you receive from us.</strong></li>
+                </ul>
+                <br />
+                <span class="middleboxTitle" style="color: black !important;">Please see our Privacy Policies, which you can find at the bottom of each page on our website, for additional information about these requests and the rights and choices available to you.</span><br />
+                <br />
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <label><span style="color: red;"></span>Merchant ID</label>
+                        </td>
+                        <td>
+                            <label><span style="color: red;"></span>SSN Last 4 Digit</label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input runat="server" id="txtMID" class="form-control" type="text" maxlength="50" name="MerchantId" />
+                        </td>
+                        <td>
+                            <input runat="server" id="txtSSN" class="form-control" type="password" maxlength="4" name="SSN" />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 8px;">
+                            <label><span style="color: red;">*</span>First Name</label>
+                        </td>
+                        <td style="padding-top: 8px;">
+                            <label><span style="color: red;">*</span>Last Name</label>
+                        </td>
+                        <td style="padding-top: 8px;">
+                            <label><span style="color: red;">*</span>Email that you use with us</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input runat="server" id="txtFname" class="form-control" type="text" maxlength="50" name="FirstName" />
+                        </td>
+                        <td>
+                            <input runat="server" id="txtLname" class="form-control" type="text" maxlength="50" name="LastName" />
+                        </td>
+                        <td>
+                            <input runat="server" id="txtEmail" class="form-control" type="text" maxlength="50" name="Email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 8px;">
+                            <label><span style="color: red;">*</span>Phone Number</label>
+                        </td>
+                        <td style="padding-top: 8px;">
+                            <label><span style="color: red;">*</span>City</label>
+                        </td>
+                        <td style="padding-top: 8px;">
+                            <label><span style="color: red;">*</span>Zip Code</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input runat="server" id="txtPhone" class="form-control" type="text" maxlength="50" name="Phone" />
+                        </td>
+                        <td>
+                            <input runat="server" id="txtCity" class="form-control" type="text" maxlength="50" name="City" />
+                        </td>
+                        <td>
+                            <input runat="server" id="txtZip" class="form-control" type="text" maxlength="50" name="Zip" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        <label><input type="checkbox" ID="chkDisclosure" name="Disclosure" />Disclosure</label>
+                                    </td>
+                                    <td>
+                                        <label><input type="checkbox" ID="chkOptOut" name="OptOut" />Opt-Out</label>
+                                    </td>
+                                    <td>
+                                        <label><input type="checkbox" ID="chkAccess" name="Access" />Access</label>
+                                    </td>
+                                    <td>
+                                        <label><input type="checkbox" ID="chkDeletion" name="Deletion" />Deletion</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <div class="middleboxButton" style="width: 948px !important;">
+                    <div class="middleboxButton2">
+                        @*<asp:ImageButton SkinID="SubmitButton" runat="server" ID="submit" OnClientClick="return confirm('Are you sure?');return false;" />*@
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
