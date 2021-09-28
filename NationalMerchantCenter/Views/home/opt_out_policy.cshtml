@@ -62,13 +62,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <input runat="server" id="txtFname" class="form-control" type="text" maxlength="50" name="FirstName" />
+                            <input runat="server" id="txtFname" class="form-control" type="text" maxlength="50" name="FirstName" required />
                         </td>
                         <td>
-                            <input runat="server" id="txtLname" class="form-control" type="text" maxlength="50" name="LastName" />
+                            <input runat="server" id="txtLname" class="form-control" type="text" maxlength="50" name="LastName" required />
                         </td>
                         <td>
-                            <input runat="server" id="txtEmail" class="form-control" type="text" maxlength="50" name="Email" />
+                            <input runat="server" id="txtEmail" class="form-control" type="email" maxlength="50" name="Email" required />
                         </td>
                     </tr>
                     <tr>
@@ -84,13 +84,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <input runat="server" id="txtPhone" class="form-control" type="text" maxlength="50" name="Phone" />
+                            <input runat="server" id="txtPhone" class="form-control" type="text" maxlength="50" name="Phone" required />
                         </td>
                         <td>
-                            <input runat="server" id="txtCity" class="form-control" type="text" maxlength="50" name="City" />
+                            <input runat="server" id="txtCity" class="form-control" type="text" maxlength="50" name="City" required />
                         </td>
                         <td>
-                            <input runat="server" id="txtZip" class="form-control" type="text" maxlength="50" name="Zip" />
+                            <input runat="server" id="txtZip" class="form-control" type="text" maxlength="50" name="Zip" required />
                         </td>
                     </tr>
                     <tr>
@@ -118,7 +118,6 @@
                 <br />
                 <div class="middleboxButton" style="width: 948px !important;">
                     <div class="middleboxButton2">
-                        @*<asp:ImageButton SkinID="SubmitButton" runat="server" ID="submit" OnClientClick="return confirm('Are you sure?');return false;" />*@
                         <button type="submit" id="submit">Submit</button>
                     </div>
                 </div>

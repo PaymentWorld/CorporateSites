@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Codebase.Website.Nmc.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace Codebase.Website.Controllers
@@ -46,64 +49,58 @@ namespace Codebase.Website.Controllers
             var Access = Request.Form.Get("Access");
             var Deletion = Request.Form.Get("Deletion");
 
-            var parameters = "'" + MerchantId +
-                                 "','" + SSN +
-                                 "','" + FirstName +
-                                 "','" + LastName +
-                                 "','" + Email +
-                                 "','" + Phone +
-                                 "','" + City +
-                                 "','" + Zip + "',";
 
-             parameters += "@Disclosure, @OptOut, @Access, @Deletion";
+            var z_SmtpPassword = WebConfigurationManager.AppSettings["SmtpPassword"];
+            var z_SmtpPort = Convert.ToInt32(WebConfigurationManager.AppSettings["SmtpPort"]);
+            var z_SmtpServer = WebConfigurationManager.AppSettings["SmtpHost"];
+            var z_SmtpUsername = WebConfigurationManager.AppSettings["SmtpUsername"];
+            var z_EmailPriority = Convert.ToInt32(WebConfigurationManager.AppSettings["SmtpPriority"]);
+            var z_SmtpSsl = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["SmtpSSL"]);
+            var z_SmtpAdminEmail = System.Configuration.ConfigurationManager.AppSettings["SmtpAdminEmail"];
+            var z_SmtpCc = System.Configuration.ConfigurationManager.AppSettings["SmtpCc"];
+            var z_SmtpBcc = System.Configuration.ConfigurationManager.AppSettings["SmtpBcc"];
 
-                if (Disclosure == "on")
-                {
-                    parameters = parameters.Replace("@Disclosure", "'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "'");
-                }
-                if (OptOut == "on")
-                {
-                    parameters = parameters.Replace("@OptOut", "'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "'");
-                }
-                if (Access == "on")
-                {
-                    parameters = parameters.Replace("@Access", "'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "'");
-                }
-                if (Deletion == "on")
-                {
-                    parameters = parameters.Replace("@Deletion", "'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "'");
-                }
 
-                //replace unchecked policy with NULLs
-                parameters = parameters
-                    .Replace("@Disclosure", "NULL")
-                    .Replace("@OptOut", "NULL")
-                    .Replace("@Access", "NULL")
-                    .Replace("@Deletion", "NULL");
+            string fromEmail = Email;
+            string fromName = FirstName + ' ' + LastName;
+            string recipient = z_SmtpAdminEmail;
+            string cc = z_SmtpCc;
+            string bcc = z_SmtpBcc;
+            string subject = "NMC Opt-Out Request";
+            string body = @"From: " + fromEmail;
+            body += @"</br>";
+            body += @"Name: " + fromName;
+            body += @"</br>";
+            body += @"Subject: NMC Opt-Out Request";
+            body += @"</br>";
+            body += @"Phone: " + Phone;
+            body += @"</br>";
+            body += @"City: " + City;
+            body += @"</br>";
+            body += @"Zip: " + Zip;
+            body += @"</br>";
+            body += @"Disclosure: " + (Disclosure == "on" ? "Yes" : "No");
+            body += @"</br>";
+            body += @"OptOut: " + (OptOut == "on" ? "Yes" : "No");
+            body += @"</br>";
+            body += @"Access: " + (Access == "on" ? "Yes" : "No");
+            body += @"</br>";
+            body += @"Deletion: " + (Deletion == "on" ? "Yes" : "No");
+            body += @"</br>";
 
-            using (SqlConnection connection = new SqlConnection(Nmc.Properties.Settings.Default.connString))
-            {
-                // Create a SqlCommand, and identify it as a stored procedure.
-                using (SqlCommand sqlCommand = new SqlCommand("EXEC api_MerchantPolicy_Insert " + parameters, connection))
-                {
-                    sqlCommand.CommandType = CommandType.Text;
-                    try
-                    {
-                        connection.Open();
-
-                        // Run the stored procedure.
-                        sqlCommand.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        var x = ex;
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                }
-            }
+            SmtpClient.SendEmail(z_SmtpServer,
+                                z_SmtpPort,
+                                z_SmtpUsername,
+                                z_SmtpPassword,
+                                z_SmtpSsl,
+                                fromEmail,
+                                fromName,
+                                recipient,
+                                cc,
+                                bcc,
+                                subject,
+                                body,
+                                (System.Net.Mail.MailPriority)z_EmailPriority);
 
             return Redirect("opt_out_policy");
         }
